@@ -25,8 +25,8 @@ with uinput.Device(events, name="virtual-joystick") as device:
         # endless loop
         while True:
             # Determine position
-            left_joystick_swt_value = mcp3008.read(left_joystick.swt)
-            right_joystick_swt_value = mcp3008.read(right_joystick.swt)
+            left_joystick_swt_value = getBtnInput(mcp3008.read(left_joystick.swt))
+            right_joystick_swt_value = getBtnInput(mcp3008.read(right_joystick.swt))
             gamepadValues = (
                 # Left Joystick
                 1000 - mcp3008.read(left_joystick.vrx),
@@ -37,15 +37,15 @@ with uinput.Device(events, name="virtual-joystick") as device:
                 mcp3008.read(right_joystick.vry),
                 left_joystick_swt_value,
                 # A, B, X, Y Buttons
-                getBtnInput(left_joystick_swt_value),
-                getBtnInput(left_joystick_swt_value),
-                getBtnInput(left_joystick_swt_value),
-                getBtnInput(left_joystick_swt_value),
+                left_joystick_swt_value,
+                left_joystick_swt_value,
+                left_joystick_swt_value,
+                left_joystick_swt_value,
                 # D-Pad Buttons
-                getBtnInput(right_joystick_swt_value),
-                getBtnInput(right_joystick_swt_value),
-                getBtnInput(right_joystick_swt_value),
-                getBtnInput(right_joystick_swt_value)
+                right_joystick_swt_value,
+                right_joystick_swt_value,
+                right_joystick_swt_value,
+                right_joystick_swt_value
             )
             eventHandler(device, gamepadValues)
             # Wait
