@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import os
 import configparser
 
 GPIO_SECTION='GPIO'
@@ -8,8 +9,11 @@ MCP23017_SECTION='MCP23017'
 
 class ButtonMap:
     def __init__(self):
+        script_directory = os.path.dirname(os.path.abspath(__file__))
+        config_file_path = os.path.join(script_directory, 'gamepad.cfg')
         gamepad_configs = configparser.ConfigParser()
-        gamepad_configs.read('gamepad.cfg')
+        print(config_file_path)
+        gamepad_configs.read(config_file_path)
 
         # GPIO
         self.DPAD_UP = gamepad_configs.get(GPIO_SECTION, 'DPAD_UP')
