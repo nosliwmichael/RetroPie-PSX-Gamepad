@@ -29,26 +29,28 @@ def eventHandler(gamepad, values, prevValues):
     gamepad.emit(uinput.ABS_RY, values[4], syn=False)
     
     if values[2] != prevValues[2]:
-        gamepad.emit_click(uinput.BTN_THUMBL, values[2])
+        gamepad.emit(uinput.BTN_THUMBL, values[2], syn=False)
     if values[5] != prevValues[5]:
-        gamepad.emit_click(uinput.BTN_THUMBR, values[5])
+        gamepad.emit(uinput.BTN_THUMBR, values[5], syn=False)
     
     # A, B, X, Y Buttons
     if values[6] != prevValues[6]:
-        gamepad.emit(uinput.BTN_A, values[6])
+        gamepad.emit(uinput.BTN_A, values[6], syn=False)
     if values[7] != prevValues[7]:
-        gamepad.emit(uinput.BTN_B, values[7])
+        gamepad.emit(uinput.BTN_B, values[7], syn=False)
     if values[8] != prevValues[8]:
-        gamepad.emit(uinput.BTN_X, values[8])
+        gamepad.emit(uinput.BTN_X, values[8], syn=False)
     if values[9] != prevValues[9]:
-        gamepad.emit(uinput.BTN_Y, values[9])
+        gamepad.emit(uinput.BTN_Y, values[9], syn=False)
     
     # UP, DOWN, LEFT, RIGHT
     if values[10] != prevValues[10]:
-        gamepad.emit(uinput.BTN_DPAD_UP, values[10])
+        gamepad.emit(uinput.BTN_DPAD_UP, values[10], syn=False)
     if values[11] != prevValues[11]:
-        gamepad.emit(uinput.BTN_DPAD_DOWN, values[11])
+        gamepad.emit(uinput.BTN_DPAD_DOWN, values[11], syn=False)
     if values[12] != prevValues[12]:
-        gamepad.emit(uinput.BTN_DPAD_LEFT, values[12])
+        gamepad.emit(uinput.BTN_DPAD_LEFT, values[12], syn=False)
     if values[13] != prevValues[13]:
-        gamepad.emit(uinput.BTN_DPAD_RIGHT, values[13])
+        gamepad.emit(uinput.BTN_DPAD_RIGHT, values[13], syn=False)
+    
+    gamepad.syn()
