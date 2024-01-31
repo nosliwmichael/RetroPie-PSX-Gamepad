@@ -36,7 +36,7 @@ def convertAnalogBtnValue(btnVal):
     return 1 if btnVal < 500 else 0
 
 def convertDigitalBtnValue(btnVal):
-    return 1 if btnVal == 0 else 1
+    return 1 if btnVal == 0 else 0
 
 def readChannel(adcChannel):
     return mcp3008.read(adcChannel.channel)
@@ -56,6 +56,7 @@ def printGamepad(gamepad):
 
 with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as device:
     try:
+        prevGamepadValues = (0,0,0,0,0,0,0,0,0,0,0,0,0,0)
         # endless loop
         while True:
             updateJoystickValues(left_joystick)
@@ -82,8 +83,8 @@ with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as device:
                 convertDigitalBtnValue(GPIO.input(button_map.left)),
                 convertDigitalBtnValue(GPIO.input(button_map.right))
             )
-            printGamepad(gamepadValues)
-            eventHandler(device, gamepadValues)
+            #printGamepad(gamepadValues)
+            eventHandler(device, gamepadValues, prevGamepadValues)
             # Wait
             time.sleep(delay)
     except KeyboardInterrupt:
