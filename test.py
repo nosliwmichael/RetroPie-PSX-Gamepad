@@ -1,68 +1,40 @@
-from evdev import UInput, AbsInfo, ecodes as e
-from MCP3008 import MCP3008
-from Joystick import Joystick
-import time
+#!/usr/bin/python
 
-# Instantiate MCP3008 class to assist with SPI communication to the MCP3008 chip
-mcp3008 = MCP3008()
+import configparser
 
-# Instantiate Joystick class to define Axis Channels (channel 3 to 7 can be assigned for more buttons / joysticks)
-left_joystick = Joystick()
-right_joystick = Joystick(swt=3, vrx=4, vry=5)
+GPIO_SECTION='GPIO'
+MCP3008_SECTION='MCP3008'
+MCP23017_SECTION='MCP23017'
 
-# Define the capabilities of your virtual gamepad
-cap = {
-    e.EV_KEY : [0x13d, 0x13e],
-    e.EV_ABS : [
-        (e.ABS_X, AbsInfo(value=0, min=0, max=1000, fuzz=0, flat=0, resolution=0)),
-        (e.ABS_Y, AbsInfo(0, 0, 1000, 0, 0, 0)),
-        (e.ABS_RX, AbsInfo(0, 0, 1000, 0, 0, 0)),
-        (e.ABS_RY, AbsInfo(0, 0, 1000, 0, 0, 0))
-    ]
-}
+class ButtonMap:
+    def __init__(self):
+        gamepad_configs = configparser.ConfigParser()
+        gamepad_configs.read('gamepad.cfg')
 
-def convertBtnValue(btnVal):
-    return 1 if btnVal < 500 else 0
+        # GPIO
+        self.DPAD_UP = gamepad_configs.get(GPIO_SECTION, 'DPAD_UP')
+        self.DPAD_DOWN = gamepad_configs.get(GPIO_SECTION, 'DPAD_DOWN')
+        self.DPAD_LEFT = gamepad_configs.get(GPIO_SECTION, 'DPAD_LEFT')
+        self.DPAD_RIGHT = gamepad_configs.get(GPIO_SECTION, 'DPAD_RIGHT')
+        self.A = gamepad_configs.get(GPIO_SECTION, 'A')
+        self.B = gamepad_configs.get(GPIO_SECTION, 'B')
+        self.X = gamepad_configs.get(GPIO_SECTION, 'X')
+        self.Y = gamepad_configs.get(GPIO_SECTION, 'Y')
+        
+        # MCP3008
+        self.LEFT_JOYSTICK_BTN = gamepad_configs.get(MCP3008_SECTION, 'LEFT_JOYSTICK_BTN')
+        self.LEFT_JOYSTICK_X = gamepad_configs.get(MCP3008_SECTION, 'LEFT_JOYSTICK_X')
+        self.LEFT_JOYSTICK_Y = gamepad_configs.get(MCP3008_SECTION, 'LEFT_JOYSTICK_Y')
+        self.RIGHT_JOYSTICK_BTN = gamepad_configs.get(MCP3008_SECTION, 'RIGHT_JOYSTICK_BTN')
+        self.RIGHT_JOYSTICK_X = gamepad_configs.get(MCP3008_SECTION, 'RIGHT_JOYSTICK_X')
+        self.RIGHT_JOYSTICK_Y = gamepad_configs.get(MCP3008_SECTION, 'RIGHT_JOYSTICK_Y')
 
-def readChannel(adcChannel):
-    return mcp3008.read(adcChannel.channel)
+        # MCP23017
+        self.START = gamepad_configs.getint(MCP23017_SECTION, 'START')
+        self.SELECT = gamepad_configs.getint(MCP23017_SECTION, 'SELECT')
+        self.LEFT_SHOULDER = gamepad_configs.getint(MCP23017_SECTION, 'LEFT_SHOULDER')
+        self.RIGHT_SHOULDER = gamepad_configs.getint(MCP23017_SECTION, 'RIGHT_SHOULDER')
+        self.LEFT_TRIGGER = gamepad_configs.getint(MCP23017_SECTION, 'LEFT_TRIGGER')
+        self.RIGHT_TRIGGER = gamepad_configs.getint(MCP23017_SECTION, 'RIGHT_TRIGGER')
 
-def updateJoystickValues(joystick):
-    joystick.swtValue = convertBtnValue(readChannel(joystick.swtChannel))
-    joystick.vryValue = readChannel(joystick.vryChannel)
-    joystick.vrxValue = readChannel(joystick.vrxChannel)
-
-mcp3008.open()
-# Create a virtual input device
-with UInput(cap, name='example-device', version=0x3) as ui:
-    for x in range(0, 800):
-        ui.write(e.EV_ABS, x, 1000)
-        ui.syn()
-        time.sleep(0.05)
-        print(x)
-#     while True:
-#         # Read joystick values
-#         updateJoystickValues(left_joystick)
-#         updateJoystickValues(right_joystick)
-#         lx = left_joystick.vrxValue
-#         ly = left_joystick.vryValue
-#         lz = left_joystick.swtValue
-#         rx = right_joystick.vrxValue
-#         ry = right_joystick.vryValue
-#         rz = right_joystick.swtValue
-# 
-#         # Emit joystick events
-#         ui.write(e.EV_ABS, e.ABS_X, lx)
-#         ui.write(e.EV_ABS, e.ABS_Y, ly)
-#         ui.write(e.EV_ABS, e.ABS_RX, rx)
-#         ui.write(e.EV_ABS, e.ABS_RY, ry)
-#         
-#         # Emit button events
-#         ui.write(e.EV_KEY, 317, lz)
-#         ui.write(e.EV_KEY, 318, rz)
-# 
-#         # Synchronize events
-#         ui.syn()
-# 
-#         # Delay to prevent excessive CPU usage
-#         time.sleep(0.01)
+print(vars(ButtonMap()))

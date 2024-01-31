@@ -10,22 +10,23 @@ import time
 # Instantiate MCP3008 class to assist with SPI communication to the MCP3008 chip
 mcp3008 = MCP3008()
 
-# Instantiate Joystick class to define Axis Channels (channel 3 to 7 can be assigned for more buttons / joysticks)
-left_joystick = Joystick()
-right_joystick = Joystick(swt=3, vrx=4, vry=5)
+button_map = ButtonMap()
 
 # GPIO Button Mapping
-button_map = ButtonMap()
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(button_map.up, GPIO.IN)
-GPIO.setup(button_map.down, GPIO.IN)
-GPIO.setup(button_map.left, GPIO.IN)
-GPIO.setup(button_map.right, GPIO.IN)
-GPIO.setup(button_map.a, GPIO.IN)
-GPIO.setup(button_map.b, GPIO.IN)
-GPIO.setup(button_map.x, GPIO.IN)
-GPIO.setup(button_map.y, GPIO.IN)
+GPIO.setup(button_map.DPAD_UP, GPIO.IN)
+GPIO.setup(button_map.DPAD_DOWN, GPIO.IN)
+GPIO.setup(button_map.DPAD_LEFT, GPIO.IN)
+GPIO.setup(button_map.DPAD_RIGHT, GPIO.IN)
+GPIO.setup(button_map.A, GPIO.IN)
+GPIO.setup(button_map.B, GPIO.IN)
+GPIO.setup(button_map.X, GPIO.IN)
+GPIO.setup(button_map.Y, GPIO.IN)
+
+# Instantiate Joystick class to define Axis Channels (channel 3 to 7 can be assigned for more buttons / joysticks)
+left_joystick = Joystick(button_map.LEFT_JOYSTICK_BTN, button_map.LEFT_JOYSTICK_X, button_map.LEFT_JOYSTICK_Y)
+right_joystick = Joystick(button_map.RIGHT_JOYSTICK_BTN, button_map.RIGHT_JOYSTICK_X, button_map.RIGHT_JOYSTICK_Y)
 
 # Time delay, which tells how many seconds the value is read out
 delay = 0.05
@@ -60,9 +61,9 @@ with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as device:
         # endless loop
         while True:
             updateJoystickValues(left_joystick)
-            left_joystick.vrxValue = 1000 - left_joystick.vrxValue
+            left_joystick.vrxValue = left_joystick.vrxValue
             updateJoystickValues(right_joystick)
-            right_joystick.vrxValue = 1000 - right_joystick.vrxValue
+            right_joystick.vrxValue = right_joystick.vrxValue
             gamepadValues = (
                 # Left Joystick
                 left_joystick.vrxValue,
@@ -73,15 +74,15 @@ with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as device:
                 right_joystick.vryValue,
                 right_joystick.swtValue,
                 # A, B, X, Y Buttons
-                convertDigitalBtnValue(GPIO.input(button_map.a)),
-                convertDigitalBtnValue(GPIO.input(button_map.b)),
-                convertDigitalBtnValue(GPIO.input(button_map.x)),
-                convertDigitalBtnValue(GPIO.input(button_map.y)),
+                convertDigitalBtnValue(GPIO.input(button_map.A)),
+                convertDigitalBtnValue(GPIO.input(button_map.B)),
+                convertDigitalBtnValue(GPIO.input(button_map.X)),
+                convertDigitalBtnValue(GPIO.input(button_map.Y)),
                 # D-Pad Buttons
-                convertDigitalBtnValue(GPIO.input(button_map.up)),
-                convertDigitalBtnValue(GPIO.input(button_map.down)),
-                convertDigitalBtnValue(GPIO.input(button_map.left)),
-                convertDigitalBtnValue(GPIO.input(button_map.right))
+                convertDigitalBtnValue(GPIO.input(button_map.DPAD_UP)),
+                convertDigitalBtnValue(GPIO.input(button_map.DPAD_DOWN)),
+                convertDigitalBtnValue(GPIO.input(button_map.DPAD_LEFT)),
+                convertDigitalBtnValue(GPIO.input(button_map.DPAD_RIGHT))
             )
             #printGamepad(gamepadValues)
             eventHandler(device, gamepadValues, prevGamepadValues)
