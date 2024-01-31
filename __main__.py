@@ -87,6 +87,7 @@ with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as device:
             eventHandler(device, gamepadValues, prevGamepadValues)
             # Wait
             time.sleep(delay)
+            prevGamepadValues = gamepadValues
     except KeyboardInterrupt:
         print("Gamepad loop terminated...")
         pass
