@@ -31,7 +31,7 @@ def printGamepad(gamepad_map: GamepadMap):
 
     mcp3008_str = ""
     for input in gamepad_map.mcp3008_inputs:
-        gpio_str.join(input.name, ": ", input.value, ", ")
+        gpio_str.join("{}: {}, ".format(input.name, input.value))
     print(mcp3008_str)
 
 with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual_gamepad:
