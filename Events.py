@@ -35,6 +35,7 @@ def eventHandler(virtual_gamepad: uinput.Device,
     for input in gamepad_map.gpio_inputs:
         input.value = readGpioPin(input)
         if (input.value != input.prev_value):
+            printInput(input)
             virtual_gamepad.emit(input.event_code, input.value, syn=False)
             input.prev_value = input.value
 
@@ -44,6 +45,7 @@ def eventHandler(virtual_gamepad: uinput.Device,
             (input.is_digital and input.value != input.prev_value) or
             (input.value > abs(input.value - input.prev_value) + 50)
         ):
+            printInput(input)
             virtual_gamepad.emit(input.event_code, input.value, syn=False)
             input.prev_value = input.value
 
@@ -52,6 +54,7 @@ def eventHandler(virtual_gamepad: uinput.Device,
     #     if (input.value != input.prev_value):
     #         virtual_gamepad.emit(input.event_code, input.value, syn=False)
     #         input.prev_value = input.value
+    #         printInput(input)
     
     virtual_gamepad.syn()
 
@@ -73,3 +76,6 @@ def readGpioPin(input: GamepadInput) -> int:
 
 def readGpioExpansionPin(input: GamepadInput) -> int:
     return convertDigitalBtnValue(1)
+
+def printInput(input: GamepadInput):
+    print(vars(input))
