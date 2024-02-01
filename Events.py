@@ -63,8 +63,10 @@ def eventHandler(virtual_gamepad: uinput.Device,
 
     for input in gamepad_map.mcp3008_inputs:
         input.value = readAnalogChannel(mcp3008, input)
+        abs_diff = abs(input.value - input.prev_value)
         if (
-            (input.value != input.prev_value)
+            (input.is_digital and input.value != input.prev_value) or
+            (input.value > (abs_diff + 50))
         ):
             printInput(input)
             virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
