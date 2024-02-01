@@ -23,13 +23,9 @@ delay = 0.5
 
 mcp3008.open()
 
-def printGamepad(gamepad_map: GamepadMap):
-    print(vars(gamepad_map.mcp3008_inputs[1]))
-
 with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual_gamepad:
     try:
         while True:
-            #printGamepad(gamepad_map)
             eventHandler(virtual_gamepad, mcp3008=mcp3008, gamepad_map=gamepad_map)
             time.sleep(delay)
     except KeyboardInterrupt:
