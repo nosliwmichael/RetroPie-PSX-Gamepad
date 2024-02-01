@@ -23,18 +23,21 @@ delay = 0.5
 
 mcp3008.open()
 
-def printGamepad(gamepad):
-    print("Lx: {}, Ly: {}, L1: {}, Rx: {}, Ry: {}, R1: {}".format(
-        gamepad[0], gamepad[1], gamepad[2], gamepad[3], gamepad[4], gamepad[5]))
-    print("a: {}, b: {}, x: {}, y: {}".format(
-        gamepad[6], gamepad[7], gamepad[8], gamepad[9]))
-    print("dU: {}, dD: {}, dL: {}, dR: {}".format(
-        gamepad[10], gamepad[11], gamepad[12], gamepad[13]))
+def printGamepad(gamepad_map: GamepadMap):
+    gpio_str = ""
+    for input in gamepad_map.gpio_inputs:
+        gpio_str.join(input.name, ": ", input.value, ", ")
+    print(gpio_str)
+
+    mcp3008_str = ""
+    for input in gamepad_map.mcp3008_inputs:
+        gpio_str.join(input.name, ": ", input.value, ", ")
+    print(mcp3008_str)
 
 with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual_gamepad:
     try:
         while True:
-            printGamepad(gamepadValues)
+            printGamepad(gamepad_map)
             eventHandler(virtual_gamepad, mcp3008=mcp3008, gamepad_map=gamepad_map)
             time.sleep(delay)
     except KeyboardInterrupt:
