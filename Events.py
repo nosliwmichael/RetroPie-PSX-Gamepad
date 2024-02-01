@@ -67,7 +67,7 @@ def eventHandler(virtual_gamepad: uinput.Device,
         print("Input Value: {}, ABS_DIFF: {}".format(input.value, abs_diff))
         if (
             (input.is_digital and input.value != input.prev_value) or
-            (input.value > (abs_diff + 50))
+            (not input.is_digital and input.value < (abs_diff + 50))
         ):
             printInput(input)
             virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
