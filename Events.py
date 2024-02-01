@@ -6,12 +6,12 @@ from MCP3008 import MCP3008
 
 # https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 event_map = {
-    "ABS_X" : uinput.ABS_X + (0, 1023, 0, 0),   # Left joystick X-axis
-    "ABS_Y": uinput.ABS_Y + (0, 1023, 0, 0),   # Left joystick Y-axis
-    "BTN_THUMBL": uinput.BTN_THUMBL,                # Left joystick button
-    "ABS_RX": uinput.ABS_RX + (0, 1023, 0, 0),  # Right joystick X-axis
-    "ABS_RY": uinput.ABS_RY + (0, 1023, 0, 0),  # Right joystick Y-axis
-    "BTN_THUMBR": uinput.BTN_THUMBR,                # Right joystick button
+    "ABS_X" : uinput.ABS_X,                   # Left joystick X-axis
+    "ABS_Y": uinput.ABS_Y,                    # Left joystick Y-axis
+    "BTN_THUMBL": uinput.BTN_THUMBL,          # Left joystick button
+    "ABS_RX": uinput.ABS_RX,                  # Right joystick X-axis
+    "ABS_RY": uinput.ABS_RY,                  # Right joystick Y-axis
+    "BTN_THUMBR": uinput.BTN_THUMBR,          # Right joystick button
     "BTN_SOUTH": uinput.BTN_SOUTH,
     "BTN_EAST": uinput.BTN_EAST,
     "BTN_WEST": uinput.BTN_WEST,
@@ -27,7 +27,28 @@ event_map = {
     "BTN_TL2": uinput.BTN_TL2,
     "BTN_TR": uinput.BTN_TR2
 }
-events = tuple(event_map.values())
+events = (
+    uinput.ABS_X + (0, 1023, 0, 0),   # Left joystick X-axis
+    uinput.ABS_Y + (0, 1023, 0, 0),   # Left joystick Y-axis
+    uinput.BTN_THUMBL,                # Left joystick button
+    uinput.ABS_RX + (0, 1023, 0, 0),  # Right joystick X-axis
+    uinput.ABS_RY + (0, 1023, 0, 0),  # Right joystick Y-axis
+    uinput.BTN_THUMBR,                # Right joystick button
+    uinput.BTN_SOUTH,
+    uinput.BTN_EAST,
+    uinput.BTN_WEST,
+    uinput.BTN_NORTH,
+    uinput.BTN_DPAD_UP,
+    uinput.BTN_DPAD_DOWN,
+    uinput.BTN_DPAD_LEFT,
+    uinput.BTN_DPAD_RIGHT,
+    uinput.BTN_START,
+    uinput.BTN_SELECT,
+    uinput.BTN_TL,
+    uinput.BTN_TR,
+    uinput.BTN_TL2,
+    uinput.BTN_TR2
+)
 
 # The order of events handled must match the events tuple above
 def eventHandler(virtual_gamepad: uinput.Device, 
