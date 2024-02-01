@@ -100,4 +100,5 @@ def readGpioExpansionPin(input: GamepadInput) -> int:
     return convertDigitalBtnValue(1)
 
 def printInput(input: GamepadInput):
-    print(vars(input))
+    #print(vars(input))
+    pass
