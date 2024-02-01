@@ -35,7 +35,7 @@ with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual
     try:
         while True:
             #printGamepad(gamepadValues)
-            eventHandler(virtual_gamepad, gamepad=gamepad_map)
+            eventHandler(virtual_gamepad, mcp3008=mcp3008, gamepad_map=gamepad_map)
             time.sleep(delay)
     except KeyboardInterrupt:
         print("Gamepad loop terminated...")
