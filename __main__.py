@@ -19,7 +19,7 @@ for input in gamepad_map.gpio_inputs:
     GPIO.setup(input.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Time delay, which tells how many seconds the value is read out
-delay = 0.05
+delay = 0.5
 
 mcp3008.open()
 
@@ -34,7 +34,7 @@ def printGamepad(gamepad):
 with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual_gamepad:
     try:
         while True:
-            #printGamepad(gamepadValues)
+            printGamepad(gamepadValues)
             eventHandler(virtual_gamepad, mcp3008=mcp3008, gamepad_map=gamepad_map)
             time.sleep(delay)
     except KeyboardInterrupt:
