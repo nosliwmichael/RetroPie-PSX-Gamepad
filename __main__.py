@@ -19,7 +19,7 @@ for input in gamepad_map.gpio_inputs:
     GPIO.setup(input.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Time delay, which tells how many seconds the value is read out
-delay = 0.5
+delay = 0.05
 
 mcp3008.open()
 
