@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import smbus
-import time
 
 DEVICE = 0x20 # Device address of MCP23017
 IODIRA = 0x00 # Input/Output Direction Port A
@@ -31,6 +30,6 @@ class MCP23017:
         if (port == "B"):
             registry = GPIOB
         
-        byte_value = self.bus.read_byte_data(DEVICE, registry)
+        int_value = int(self.bus.read_byte_data(DEVICE, registry), 2)
 
-        return 1 if byte_value & mask == 0b0 else 0
+        return 1 if int_value & mask == 0b0 else 0
