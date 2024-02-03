@@ -26,7 +26,8 @@ event_map = {
     "BTN_TL": uinput.BTN_TL,
     "BTN_TR": uinput.BTN_TR,
     "BTN_TL2": uinput.BTN_TL2,
-    "BTN_TR2": uinput.BTN_TR2
+    "BTN_TR2": uinput.BTN_TR2,
+    "BTN_MODE": uinput.BTN_MODE
 }
 events = (
     uinput.ABS_X + (0, 1023, 0, 0),   # Left joystick X-axis
@@ -48,7 +49,8 @@ events = (
     uinput.BTN_TL,
     uinput.BTN_TR,
     uinput.BTN_TL2,
-    uinput.BTN_TR2
+    uinput.BTN_TR2,
+    uinput.BTN_MODE
 )
 
 # The order of events handled must match the events tuple above
