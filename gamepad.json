@@ -24,6 +24,6 @@
         { "name": "BTN_TL", "event_code": "0x136", "channel": "0b00001000", "port": "A", "is_digital": true },
         { "name": "BTN_TR", "event_code": "0x137", "channel": "0b00010000", "port": "A", "is_digital": true },
         { "name": "BTN_TL2", "event_code": "0x138", "channel": "0b00100000", "port": "A", "is_digital": true },
-        { "name": "BTN_TR2", "event_code": "0x139", "channel": "0b01000000", "port": "A", "is_digital": true }
+        { "name": "BTN_TR2", "event_code": "0x139", "channel": "0b01000000", "port": "B", "is_digital": true }
     ]
 }
