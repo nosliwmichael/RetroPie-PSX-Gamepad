@@ -30,6 +30,6 @@ class MCP23017:
         if (port == "B"):
             registry = GPIOB
         
-        int_value = int(self.bus.read_byte_data(DEVICE, registry), 2)
+        byte_value = self.bus.read_byte_data(DEVICE, registry)
 
-        return 1 if int_value & mask == 0b0 else 0
+        return 1 if byte_value & int(mask, 2) == 0b0 else 0
