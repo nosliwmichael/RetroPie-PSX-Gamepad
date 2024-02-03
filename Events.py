@@ -3,6 +3,7 @@ from GamepadMap import GamepadMap
 from GamepadInput import GamepadInput
 import RPi.GPIO as GPIO
 from MCP3008 import MCP3008
+from MCP23017 import MCP23017
 
 # https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 event_map = {
@@ -52,7 +53,8 @@ events = (
 
 # The order of events handled must match the events tuple above
 def eventHandler(virtual_gamepad: uinput.Device, 
-                 mcp3008: MCP3008, 
+                 mcp3008: MCP3008,
+                 mcp23017: MCP23017,
                  gamepad_map: GamepadMap):
     for input in gamepad_map.gpio_inputs:
         input.value = readGpioPin(input)
@@ -63,20 +65,21 @@ def eventHandler(virtual_gamepad: uinput.Device,
 
     for input in gamepad_map.mcp3008_inputs:
         input.value = readAnalogChannel(mcp3008, input)
+        abs_diff = abs(input.value - input.prev_value)
         if (
             (input.is_digital and input.value != input.prev_value) or
-            (not input.is_digital)
+            (not input.is_digital and abs_diff > 50)
         ):
             printInput(input)
             virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
-    # for input in gamepad_map.mcp23017_inputs:
-    #     input.value = readGpioExpansionPin(input)
-    #     if (input.value != input.prev_value):
-    #         virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
-    #         input.prev_value = input.value
-    #         printInput(input)
+    for input in gamepad_map.mcp23017_inputs:
+        input.value = readGpioExpansionPin(mcp23017, input)
+        if (input.value != input.prev_value):
+            printInput(input)
+            virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
+            input.prev_value = input.value
     
     virtual_gamepad.syn()
 
@@ -96,8 +99,8 @@ def readAnalogChannel(mcp3008: MCP3008, input: GamepadInput) -> int:
 def readGpioPin(input: GamepadInput) -> int:
     return convertDigitalBtnValue(GPIO.input(input.channel))
 
-def readGpioExpansionPin(input: GamepadInput) -> int:
-    return convertDigitalBtnValue(1)
+def readGpioExpansionPin(mcp23017: MCP23017, input: GamepadInput) -> int:
+    return mcp23017.readGPIO(input.port, input.channel)
 
 def printInput(input: GamepadInput):
     #print(vars(input))

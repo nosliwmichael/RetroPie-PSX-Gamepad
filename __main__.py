@@ -23,7 +23,7 @@ delay = 0.05
 
 mcp3008.open()
 
-with uinput.Device(events, name="Xbox One", vendor=3695, product=313) as virtual_gamepad:
+with uinput.Device(events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad:
     try:
         while True:
             eventHandler(virtual_gamepad, mcp3008=mcp3008, gamepad_map=gamepad_map)
