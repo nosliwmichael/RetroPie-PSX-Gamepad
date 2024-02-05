@@ -112,10 +112,10 @@ def convertDigitalBtnValue(btnVal: int) -> int:
     return 1 if btnVal == 0 else 0
 
 def printInput(input: GamepadInput):
-    print(vars(input))
+    #print(vars(input))
     pass
 
 def printPorts(portA, portB):
-    print("PORT A: {}".format(portA))
-    print("PORT B: {}".format(portB))
+    #print("PORT A: {}".format(portA))
+    #print("PORT B: {}".format(portB))
     pass
