@@ -35,8 +35,8 @@ class GamepadMap:
         
     def getEvents(self):
         return tuple(i.event_code for i in self.gpio_inputs) + \
-                tuple(i.event_code for i in self.gpio_inputs) + \
-                tuple(i.event_code for i in self.gpio_inputs)
+                tuple(i.event_code for i in self.mcp3008_inputs) + \
+                tuple(i.event_code for i in self.mcp23017_inputs)
 
 def mapInput(config) -> GamepadInput:
     return GamepadInput(
