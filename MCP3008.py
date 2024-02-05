@@ -8,10 +8,10 @@ class MCP3008:
     def __init__(self, bus = 0, device = 0):
         self.bus, self.device = bus, device
         self.spi = SpiDev()
-        self.spi.max_speed_hz = 1000000 # 1MHz
     
     def __enter__(self):
         self.spi.open(self.bus, self.device)
+        self.spi.max_speed_hz = 1000000 # 1MHz
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.spi.close()
