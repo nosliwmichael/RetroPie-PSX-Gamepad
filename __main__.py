@@ -11,12 +11,6 @@ import time
 # Time delay, which tells how many seconds the value is read out
 DELAY = 1
 
-def printGamepadMap(gamepadMap: GamepadMap):
-    for m in gamepadMap.mcp3008_inputs:
-        print(vars(m))
-    for m in gamepadMap.mcp23017_inputs:
-        print(vars(m))
-
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
     uinput.Device(Events.events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad:
@@ -34,7 +28,6 @@ with MCP3008() as mcp3008, \
                          mcp23017=mcp23017, 
                          gamepad_map=gamepad_map)
             time.sleep(DELAY)
-            printGamepadMap(gamepadMap=gamepad_map)
     except KeyboardInterrupt:
         print("Gamepad loop terminated...")
         pass

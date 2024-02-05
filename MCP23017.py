@@ -28,6 +28,7 @@ class MCP23017:
         # Enable pull-up resistors
         self.bus.write_byte_data(DEVICE, GPPUA, 0xFF)
         self.bus.write_byte_data(DEVICE, GPPUB, 0xFF)
+        print("Initialized the SMBus...")
     
     def __enter__(self):
         return self
