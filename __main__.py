@@ -9,7 +9,7 @@ import uinput
 import time
 
 # Time delay, which tells how many seconds the value is read out
-DELAY = 0.05
+DELAY = 1
 
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
@@ -31,3 +31,9 @@ with MCP3008() as mcp3008, \
     except KeyboardInterrupt:
         print("Gamepad loop terminated...")
         pass
+
+def printGamepadMap():
+    for m in gamepad_map.mcp3008_inputs:
+        print(vars(m))
+    for m in gamepad_map.mcp23017_inputs:
+        print(vars(m))
