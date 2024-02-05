@@ -5,6 +5,8 @@ import RPi.GPIO as GPIO
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
 
+# TODO: Clean up events & event_map variables
+
 # https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 event_map = {
     "ABS_X" : uinput.ABS_X,                   # Left joystick X-axis
