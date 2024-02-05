@@ -11,11 +11,9 @@ import time
 # Time delay, which tells how many seconds the value is read out
 DELAY = 0.05
 
-with (
-    MCP3008() as mcp3008,
-    MCP23017() as mcp23017,
-    uinput.Device(Events.events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad
-):
+with MCP3008() as mcp3008, \
+    MCP23017() as mcp23017, \
+    uinput.Device(Events.events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad:
     gamepad_map = GamepadMap()
     # GPIO Button Mapping
     GPIO.setwarnings(False)
