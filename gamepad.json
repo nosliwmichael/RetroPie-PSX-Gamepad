@@ -1,4 +1,7 @@
 {
+    "DEVICE_NAME": "RetroPie-PSX-Gamepad",
+    "VENDOR": 6969,
+    "PRODUCT": 420,
     "GPIO" : [
     ],
     "MCP3008" : [

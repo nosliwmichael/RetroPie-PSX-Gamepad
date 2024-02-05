@@ -10,12 +10,19 @@ class GamepadMap:
         GPIO_SECTION='GPIO'
         MCP3008_SECTION='MCP3008'
         MCP23017_SECTION='MCP23017'
+        DEVICE_NAME='DEVICE_NAME'
+        VENDOR='VENDOR'
+        PRODUCT='PRODUCT'
 
         script_directory = os.path.dirname(os.path.abspath(__file__))
         gamepad_json_file = os.path.join(script_directory, '..', 'gamepad.json')
         
         with open(gamepad_json_file) as file:
             gamepad_json = json.load(file)
+
+        self.device_name = gamepad_json[DEVICE_NAME]
+        self.vendor = gamepad_json[VENDOR]
+        self.product = gamepad_json[PRODUCT]
 
         self.gpio_inputs: List[GamepadInput] = []
         self.mcp3008_inputs: List[GamepadInput] = []

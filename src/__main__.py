@@ -14,7 +14,7 @@ GAMEPAD_MAP = GamepadMap()
 
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
-    Device(GAMEPAD_MAP.getEvents(), name="RetroPie-PSX-Gamepad", vendor=6969, product=420) as virtual_gamepad:
+    Device(GAMEPAD_MAP.getEvents(), name=GAMEPAD_MAP.device_name, vendor=GAMEPAD_MAP.vendor, product=GAMEPAD_MAP.product) as virtual_gamepad:
     # GPIO Button Mapping
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
