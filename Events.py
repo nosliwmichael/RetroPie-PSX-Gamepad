@@ -54,36 +54,53 @@ events = (
 )
 
 # The order of events handled must match the events tuple above
-def eventHandler(virtual_gamepad: uinput.Device, 
+def event_handler(virtual_gamepad: uinput.Device, 
                  mcp3008: MCP3008,
                  mcp23017: MCP23017,
                  gamepad_map: GamepadMap):
+    gpio_event_handler(virtual_gamepad, gamepad_map)
+    mcp3008_event_handler(virtual_gamepad, mcp3008, gamepad_map)
+    mcp23017_event_handler(virtual_gamepad, mcp23017, gamepad_map)
+    virtual_gamepad.syn()
+
+def gpio_event_handler(self, 
+                       gamepad: uinput.Device, 
+                       gamepad_map: GamepadMap):
     for input in gamepad_map.gpio_inputs:
-        input.value = readGpioPin(input)
+        input.value = convertDigitalBtnValue(GPIO.input(input.channel))
         if (input.value != input.prev_value):
             printInput(input)
-            virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
+def mcp3008_event_handler(self, 
+                          gamepad: uinput.Device, 
+                          mcp3008: MCP3008, 
+                          gamepad_map: GamepadMap):
     for input in gamepad_map.mcp3008_inputs:
-        input.value = readAnalogChannel(mcp3008, input)
+        analog_value = mcp3008.read(input.channel)
+        input.value = convertAnalogBtnValue(analog_value) if input.is_digital else analog_value
         abs_diff = abs(input.value - input.prev_value)
         if (
             (input.is_digital and input.value != input.prev_value) or
             (not input.is_digital and abs_diff > 50)
         ):
             printInput(input)
-            virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
+def mcp23017_event_handler(self, 
+                           gamepad: uinput.Device, 
+                           mcp23017: MCP23017,
+                           gamepad_map: GamepadMap):
+    portA = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("A")]
+    portB = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("B")]
     for input in gamepad_map.mcp23017_inputs:
-        input.value = readGpioExpansionPin(mcp23017, input)
+        input.value = portA[input.channel] if input.port == "A" else portB[input.channel]
         if (input.value != input.prev_value):
             printInput(input)
-            virtual_gamepad.emit(event_map[input.name], input.value, syn=False)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
-    
-    virtual_gamepad.syn()
 
 # Used if a digital input is passing through an ADC. Convert the value to 1 or 0
 def convertAnalogBtnValue(btnVal: int) -> int:
@@ -93,16 +110,6 @@ def convertAnalogBtnValue(btnVal: int) -> int:
 # be 1 and the pressed value to be 0
 def convertDigitalBtnValue(btnVal: int) -> int:
     return 1 if btnVal == 0 else 0
-
-def readAnalogChannel(mcp3008: MCP3008, input: GamepadInput) -> int:
-    analog_value = mcp3008.read(input.channel)
-    return convertAnalogBtnValue(analog_value) if input.is_digital else analog_value
-
-def readGpioPin(input: GamepadInput) -> int:
-    return convertDigitalBtnValue(GPIO.input(input.channel))
-
-def readGpioExpansionPin(mcp23017: MCP23017, input: GamepadInput) -> int:
-    return mcp23017.readGPIO(input.port, input.channel)
 
 def printInput(input: GamepadInput):
     #print(vars(input))

@@ -3,38 +3,33 @@
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
 from GamepadMap import GamepadMap
-from Events import events, eventHandler
+import Events
 import RPi.GPIO as GPIO
 import uinput
 import time
 
-# Instantiate the MCP3008 class to assist with SPI communication with the MCP3008 chip
-mcp3008 = MCP3008()
-
-# Instantiate the MCP23017 class to assist with I2C communication with the MCP23017 chip
-mcp23017 = MCP23017()
-
-gamepad_map = GamepadMap()
-
-# GPIO Button Mapping
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-for input in gamepad_map.gpio_inputs:
-    GPIO.setup(input.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
 # Time delay, which tells how many seconds the value is read out
-delay = 0.05
+DELAY = 0.05
 
-mcp3008.open()
+with (
+    MCP3008() as mcp3008,
+    MCP23017() as mcp23017,
+    uinput.Device(Events.events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad
+):
+    gamepad_map = GamepadMap()
+    # GPIO Button Mapping
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BCM)
+    for input in gamepad_map.gpio_inputs:
+        GPIO.setup(input.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-with uinput.Device(events, name="Custom Rig", vendor=6969, product=420) as virtual_gamepad:
     try:
         while True:
-            eventHandler(virtual_gamepad, mcp3008=mcp3008, mcp23017=mcp23017, gamepad_map=gamepad_map)
-            time.sleep(delay)
+            Events.event_handler(virtual_gamepad=virtual_gamepad, 
+                         mcp3008=mcp3008, 
+                         mcp23017=mcp23017, 
+                         gamepad_map=gamepad_map)
+            time.sleep(DELAY)
     except KeyboardInterrupt:
         print("Gamepad loop terminated...")
         pass
-
-mcp3008.close()
-print("MCP3008 connection terminated...")
