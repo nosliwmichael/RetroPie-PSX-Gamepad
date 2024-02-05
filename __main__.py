@@ -9,7 +9,7 @@ import uinput
 import time
 
 # Time delay, which tells how many seconds the value is read out
-DELAY = 1
+DELAY = 0.05
 
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
