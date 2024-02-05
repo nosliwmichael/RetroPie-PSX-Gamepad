@@ -98,6 +98,7 @@ def mcp23017_event_handler(gamepad: uinput.Device,
         input.value = portA[input.channel] if input.port == "A" else portB[input.channel]
         if (input.value != input.prev_value):
             printInput(input)
+            printPorts(portA, portB)
             gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
@@ -111,5 +112,10 @@ def convertDigitalBtnValue(btnVal: int) -> int:
     return 1 if btnVal == 0 else 0
 
 def printInput(input: GamepadInput):
-    #print(vars(input))
+    print(vars(input))
+    pass
+
+def printPorts(portA, portB):
+    print("PORT A: {}".format(portA))
+    print("PORT B: {}".format(portB))
     pass
