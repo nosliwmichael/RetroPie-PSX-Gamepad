@@ -1,62 +1,12 @@
-import uinput
+from uinput import Device
 from GamepadMap import GamepadMap
 from GamepadInput import GamepadInput
 import RPi.GPIO as GPIO
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
 
-# TODO: Clean up events & event_map variables
-
-# https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
-event_map = {
-    "ABS_X" : uinput.ABS_X,                   # Left joystick X-axis
-    "ABS_Y": uinput.ABS_Y,                    # Left joystick Y-axis
-    "BTN_THUMBL": uinput.BTN_THUMBL,          # Left joystick button
-    "ABS_RX": uinput.ABS_RX,                  # Right joystick X-axis
-    "ABS_RY": uinput.ABS_RY,                  # Right joystick Y-axis
-    "BTN_THUMBR": uinput.BTN_THUMBR,          # Right joystick button
-    "BTN_SOUTH": uinput.BTN_SOUTH,
-    "BTN_EAST": uinput.BTN_EAST,
-    "BTN_WEST": uinput.BTN_WEST,
-    "BTN_NORTH": uinput.BTN_NORTH,
-    "BTN_DPAD_UP": uinput.BTN_DPAD_UP,
-    "BTN_DPAD_DOWN": uinput.BTN_DPAD_DOWN,
-    "BTN_DPAD_LEFT": uinput.BTN_DPAD_LEFT,
-    "BTN_DPAD_RIGHT": uinput.BTN_DPAD_RIGHT,
-    "BTN_START": uinput.BTN_START,
-    "BTN_SELECT": uinput.BTN_SELECT,
-    "BTN_TL": uinput.BTN_TL,
-    "BTN_TR": uinput.BTN_TR,
-    "BTN_TL2": uinput.BTN_TL2,
-    "BTN_TR2": uinput.BTN_TR2,
-    "BTN_MODE": uinput.BTN_MODE
-}
-events = (
-    uinput.ABS_X + (0, 1023, 50, 0),   # Left joystick X-axis
-    uinput.ABS_Y + (0, 1023, 50, 0),   # Left joystick Y-axis
-    uinput.BTN_THUMBL,                # Left joystick button
-    uinput.ABS_RX + (0, 1023, 50, 0),  # Right joystick X-axis
-    uinput.ABS_RY + (0, 1023, 50, 0),  # Right joystick Y-axis
-    uinput.BTN_THUMBR,                # Right joystick button
-    uinput.BTN_SOUTH,
-    uinput.BTN_EAST,
-    uinput.BTN_WEST,
-    uinput.BTN_NORTH,
-    uinput.BTN_DPAD_UP,
-    uinput.BTN_DPAD_DOWN,
-    uinput.BTN_DPAD_LEFT,
-    uinput.BTN_DPAD_RIGHT,
-    uinput.BTN_START,
-    uinput.BTN_SELECT,
-    uinput.BTN_TL,
-    uinput.BTN_TR,
-    uinput.BTN_TL2,
-    uinput.BTN_TR2,
-    uinput.BTN_MODE
-)
-
 # The order of events handled must match the events tuple above
-def event_handler(virtual_gamepad: uinput.Device, 
+def event_handler(virtual_gamepad: Device, 
                  mcp3008: MCP3008,
                  mcp23017: MCP23017,
                  gamepad_map: GamepadMap):
@@ -65,7 +15,7 @@ def event_handler(virtual_gamepad: uinput.Device,
     mcp23017_event_handler(virtual_gamepad, mcp23017, gamepad_map)
     virtual_gamepad.syn()
 
-def gpio_event_handler(gamepad: uinput.Device, 
+def gpio_event_handler(gamepad: Device, 
                        gamepad_map: GamepadMap):
     for input in gamepad_map.gpio_inputs:
         input.value = convertDigitalBtnValue(GPIO.input(input.channel))
@@ -74,7 +24,7 @@ def gpio_event_handler(gamepad: uinput.Device,
             gamepad.emit(input.event_code[:2], input.value, syn=False)
             input.prev_value = input.value
 
-def mcp3008_event_handler(gamepad: uinput.Device, 
+def mcp3008_event_handler(gamepad: Device, 
                           mcp3008: MCP3008, 
                           gamepad_map: GamepadMap):
     for input in gamepad_map.mcp3008_inputs:
@@ -89,7 +39,7 @@ def mcp3008_event_handler(gamepad: uinput.Device,
             gamepad.emit(input.event_code[:2], input.value, syn=False)
             input.prev_value = input.value
 
-def mcp23017_event_handler(gamepad: uinput.Device, 
+def mcp23017_event_handler(gamepad: Device, 
                            mcp23017: MCP23017,
                            gamepad_map: GamepadMap):
     portA = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("A")]

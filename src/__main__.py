@@ -3,9 +3,9 @@
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
 from GamepadMap import GamepadMap
-import Events
+from Events import event_handler
 import RPi.GPIO as GPIO
-import uinput
+from uinput import Device
 import time
 
 # Time delay, which tells how many seconds the value is read out
@@ -14,7 +14,7 @@ GAMEPAD_MAP = GamepadMap()
 
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
-    uinput.Device(GAMEPAD_MAP.getEvents(), name="RetroPie-PSX-Gamepad", vendor=6969, product=420) as virtual_gamepad:
+    Device(GAMEPAD_MAP.getEvents(), name="RetroPie-PSX-Gamepad", vendor=6969, product=420) as virtual_gamepad:
     # GPIO Button Mapping
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
@@ -23,7 +23,7 @@ with MCP3008() as mcp3008, \
 
     try:
         while True:
-            Events.event_handler(virtual_gamepad=virtual_gamepad, 
+            event_handler(virtual_gamepad=virtual_gamepad, 
                          mcp3008=mcp3008, 
                          mcp23017=mcp23017, 
                          gamepad_map=GAMEPAD_MAP)

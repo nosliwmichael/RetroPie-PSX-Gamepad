@@ -38,3 +38,6 @@ A complete list of the available gamepad inputs:
 * Not yet supported
   * POWER - Shutdown the Rapsberry Pi safely
   * VOLUME - Analog wheel to adjust volume
+
+Here's an example of what it would look like to wire all of the available buttons to the MCP3008 and MCP23017 using a breadboard:
+![Joysicks and buttons wired up to an MCP3008 and MCP23017 respectively. Both ICs are connected to a Raspberry Pi 4 Model B](./docs/breadboard-setupjpg.jpg)

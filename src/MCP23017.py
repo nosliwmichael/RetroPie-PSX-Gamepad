@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from smbus2 import SMBus
-import time
 
 # This is the address of the MCP23017 when pins A0-A2 are pulled to Ground
 DEVICE = 0x20 # Device address of MCP23017

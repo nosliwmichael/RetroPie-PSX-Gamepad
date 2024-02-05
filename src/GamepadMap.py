@@ -12,7 +12,7 @@ class GamepadMap:
         MCP23017_SECTION='MCP23017'
 
         script_directory = os.path.dirname(os.path.abspath(__file__))
-        gamepad_json_file = os.path.join(script_directory, 'gamepad.json')
+        gamepad_json_file = os.path.join(script_directory, '..', 'gamepad.json')
         
         with open(gamepad_json_file) as file:
             gamepad_json = json.load(file)
