@@ -103,6 +103,8 @@ def mcp23017_event_handler(gamepad: uinput.Device,
             input.prev_value = input.value
 
 # Used if a digital input is passing through an ADC. Convert the value to 1 or 0
+# MCP3008 channels emit 10 bits which means the max value is 1023.
+# Therefore, anything less than half is converted to 0.
 def convertAnalogBtnValue(btnVal: int) -> int:
     return 1 if btnVal < 512 else 0
 

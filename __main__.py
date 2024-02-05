@@ -11,11 +11,10 @@ import time
 # Time delay, which tells how many seconds the value is read out
 DELAY = 0.05
 GAMEPAD_MAP = GamepadMap()
-print(GAMEPAD_MAP.getEvents())
 
 with MCP3008() as mcp3008, \
     MCP23017() as mcp23017, \
-    uinput.Device(GAMEPAD_MAP.getEvents(), name="Custom Rig", vendor=6969, product=420) as virtual_gamepad:
+    uinput.Device(GAMEPAD_MAP.getEvents(), name="RetroPie-PSX-Gamepad", vendor=6969, product=420) as virtual_gamepad:
     # GPIO Button Mapping
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
