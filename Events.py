@@ -63,8 +63,7 @@ def event_handler(virtual_gamepad: uinput.Device,
     mcp23017_event_handler(virtual_gamepad, mcp23017, gamepad_map)
     virtual_gamepad.syn()
 
-def gpio_event_handler(self, 
-                       gamepad: uinput.Device, 
+def gpio_event_handler(gamepad: uinput.Device, 
                        gamepad_map: GamepadMap):
     for input in gamepad_map.gpio_inputs:
         input.value = convertDigitalBtnValue(GPIO.input(input.channel))
@@ -73,8 +72,7 @@ def gpio_event_handler(self,
             gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
-def mcp3008_event_handler(self, 
-                          gamepad: uinput.Device, 
+def mcp3008_event_handler(gamepad: uinput.Device, 
                           mcp3008: MCP3008, 
                           gamepad_map: GamepadMap):
     for input in gamepad_map.mcp3008_inputs:
@@ -89,8 +87,7 @@ def mcp3008_event_handler(self,
             gamepad.emit(event_map[input.name], input.value, syn=False)
             input.prev_value = input.value
 
-def mcp23017_event_handler(self, 
-                           gamepad: uinput.Device, 
+def mcp23017_event_handler(gamepad: uinput.Device, 
                            mcp23017: MCP23017,
                            gamepad_map: GamepadMap):
     portA = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("A")]
