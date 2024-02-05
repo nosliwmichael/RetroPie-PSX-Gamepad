@@ -1,0 +1,30 @@
+{
+    "GPIO" : [
+    ],
+    "MCP3008" : [
+        { "name": "BTN_THUMBL", "event_code": "0x13d", "channel": 0, "port": null, "is_digital": true },
+        { "name": "ABS_X", "event_code": "0x00", "channel": 1, "port": null, "is_digital": false },
+        { "name": "ABS_Y", "event_code": "0x01", "channel": 2, "port": null, "is_digital": false },
+        { "name": "BTN_THUMBR", "event_code": "0x13e", "channel": 3, "port": null, "is_digital": true },
+        { "name": "ABS_RX", "event_code": "0x03", "channel": 4, "port": null, "is_digital": false },
+        { "name": "ABS_RY", "event_code": "0x04", "channel": 5, "port": null, "is_digital": false }
+    ],
+    "MCP23017" : [
+        { "name": "BTN_MODE", "event_code": "0x13c", "channel": 0, "port": "A", "is_digital": true },
+        { "name": "BTN_START", "event_code": "0x13b", "channel": 1, "port": "A", "is_digital": true },
+        { "name": "BTN_SELECT", "event_code": "0x13a", "channel": 2, "port": "A", "is_digital": true },
+        { "name": "BTN_TL", "event_code": "0x136", "channel": 3, "port": "A", "is_digital": true },
+        { "name": "BTN_TR", "event_code": "0x137", "channel": 4, "port": "A", "is_digital": true },
+        { "name": "BTN_TL2", "event_code": "0x138", "channel": 5, "port": "A", "is_digital": true },
+        { "name": "BTN_TR2", "event_code": "0x139", "channel": 7, "port": "B", "is_digital": true },
+
+        { "name": "BTN_DPAD_UP", "event_code": "0x220", "channel": 6, "port": "A", "is_digital": true },
+        { "name": "BTN_DPAD_DOWN", "event_code": "0x221", "channel": 1, "port": "B", "is_digital": true },
+        { "name": "BTN_DPAD_LEFT", "event_code": "0x222", "channel": 7, "port": "A", "is_digital": true },
+        { "name": "BTN_DPAD_RIGHT", "event_code": "0x223", "channel": 0, "port": "B", "is_digital": true },
+        { "name": "BTN_SOUTH", "event_code": "0x130", "channel": 2, "port": "B", "is_digital": true },
+        { "name": "BTN_EAST", "event_code": "0x131", "channel": 5, "port": "B", "is_digital": true },
+        { "name": "BTN_WEST", "event_code": "0x134", "channel": 3, "port": "B", "is_digital": true },
+        { "name": "BTN_NORTH", "event_code": "0x133", "channel": 4, "port": "B", "is_digital": true }
+    ]
+}

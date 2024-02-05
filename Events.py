@@ -1,56 +1,115 @@
 import uinput
+from GamepadMap import GamepadMap
+from GamepadInput import GamepadInput
+import RPi.GPIO as GPIO
+from MCP3008 import MCP3008
+from MCP23017 import MCP23017
+
+# TODO: Clean up events & event_map variables
 
 # https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
+event_map = {
+    "ABS_X" : uinput.ABS_X,                   # Left joystick X-axis
+    "ABS_Y": uinput.ABS_Y,                    # Left joystick Y-axis
+    "BTN_THUMBL": uinput.BTN_THUMBL,          # Left joystick button
+    "ABS_RX": uinput.ABS_RX,                  # Right joystick X-axis
+    "ABS_RY": uinput.ABS_RY,                  # Right joystick Y-axis
+    "BTN_THUMBR": uinput.BTN_THUMBR,          # Right joystick button
+    "BTN_SOUTH": uinput.BTN_SOUTH,
+    "BTN_EAST": uinput.BTN_EAST,
+    "BTN_WEST": uinput.BTN_WEST,
+    "BTN_NORTH": uinput.BTN_NORTH,
+    "BTN_DPAD_UP": uinput.BTN_DPAD_UP,
+    "BTN_DPAD_DOWN": uinput.BTN_DPAD_DOWN,
+    "BTN_DPAD_LEFT": uinput.BTN_DPAD_LEFT,
+    "BTN_DPAD_RIGHT": uinput.BTN_DPAD_RIGHT,
+    "BTN_START": uinput.BTN_START,
+    "BTN_SELECT": uinput.BTN_SELECT,
+    "BTN_TL": uinput.BTN_TL,
+    "BTN_TR": uinput.BTN_TR,
+    "BTN_TL2": uinput.BTN_TL2,
+    "BTN_TR2": uinput.BTN_TR2,
+    "BTN_MODE": uinput.BTN_MODE
+}
 events = (
-    uinput.ABS_X + (0, 1000, 0, 0),   # Left joystick X-axis
-    uinput.ABS_Y + (0, 1000, 0, 0),   # Left joystick Y-axis
+    uinput.ABS_X + (0, 1023, 0, 0),   # Left joystick X-axis
+    uinput.ABS_Y + (0, 1023, 0, 0),   # Left joystick Y-axis
     uinput.BTN_THUMBL,                # Left joystick button
-    uinput.ABS_RX + (0, 1000, 0, 0),  # Right joystick X-axis
-    uinput.ABS_RY + (0, 1000, 0, 0),  # Right joystick Y-axis
+    uinput.ABS_RX + (0, 1023, 0, 0),  # Right joystick X-axis
+    uinput.ABS_RY + (0, 1023, 0, 0),  # Right joystick Y-axis
     uinput.BTN_THUMBR,                # Right joystick button
-    uinput.BTN_A,
-    uinput.BTN_B,
-    uinput.BTN_X,
-    uinput.BTN_Y,
+    uinput.BTN_SOUTH,
+    uinput.BTN_EAST,
+    uinput.BTN_WEST,
+    uinput.BTN_NORTH,
     uinput.BTN_DPAD_UP,
     uinput.BTN_DPAD_DOWN,
     uinput.BTN_DPAD_LEFT,
-    uinput.BTN_DPAD_RIGHT
+    uinput.BTN_DPAD_RIGHT,
+    uinput.BTN_START,
+    uinput.BTN_SELECT,
+    uinput.BTN_TL,
+    uinput.BTN_TR,
+    uinput.BTN_TL2,
+    uinput.BTN_TR2,
+    uinput.BTN_MODE
 )
 
 # The order of events handled must match the events tuple above
-def eventHandler(gamepad, values, prevValues):
-    # Left Joystick
-    gamepad.emit(uinput.ABS_X, values[0], syn=False)
-    gamepad.emit(uinput.ABS_Y, values[1], syn=False)
+def event_handler(virtual_gamepad: uinput.Device, 
+                 mcp3008: MCP3008,
+                 mcp23017: MCP23017,
+                 gamepad_map: GamepadMap):
+    gpio_event_handler(virtual_gamepad, gamepad_map)
+    mcp3008_event_handler(virtual_gamepad, mcp3008, gamepad_map)
+    mcp23017_event_handler(virtual_gamepad, mcp23017, gamepad_map)
+    virtual_gamepad.syn()
 
-    # Right Joystick
-    gamepad.emit(uinput.ABS_RX, values[3], syn=False)
-    gamepad.emit(uinput.ABS_RY, values[4], syn=False)
-    
-    if values[2] != prevValues[2]:
-        gamepad.emit(uinput.BTN_THUMBL, values[2], syn=False)
-    if values[5] != prevValues[5]:
-        gamepad.emit(uinput.BTN_THUMBR, values[5], syn=False)
-    
-    # A, B, X, Y Buttons
-    if values[6] != prevValues[6]:
-        gamepad.emit(uinput.BTN_A, values[6], syn=False)
-    if values[7] != prevValues[7]:
-        gamepad.emit(uinput.BTN_B, values[7], syn=False)
-    if values[8] != prevValues[8]:
-        gamepad.emit(uinput.BTN_X, values[8], syn=False)
-    if values[9] != prevValues[9]:
-        gamepad.emit(uinput.BTN_Y, values[9], syn=False)
-    
-    # UP, DOWN, LEFT, RIGHT
-    if values[10] != prevValues[10]:
-        gamepad.emit(uinput.BTN_DPAD_UP, values[10], syn=False)
-    if values[11] != prevValues[11]:
-        gamepad.emit(uinput.BTN_DPAD_DOWN, values[11], syn=False)
-    if values[12] != prevValues[12]:
-        gamepad.emit(uinput.BTN_DPAD_LEFT, values[12], syn=False)
-    if values[13] != prevValues[13]:
-        gamepad.emit(uinput.BTN_DPAD_RIGHT, values[13], syn=False)
-    
-    gamepad.syn()
+def gpio_event_handler(gamepad: uinput.Device, 
+                       gamepad_map: GamepadMap):
+    for input in gamepad_map.gpio_inputs:
+        input.value = convertDigitalBtnValue(GPIO.input(input.channel))
+        if (input.value != input.prev_value):
+            printInput(input)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
+            input.prev_value = input.value
+
+def mcp3008_event_handler(gamepad: uinput.Device, 
+                          mcp3008: MCP3008, 
+                          gamepad_map: GamepadMap):
+    for input in gamepad_map.mcp3008_inputs:
+        analog_value = mcp3008.read(input.channel)
+        input.value = convertAnalogBtnValue(analog_value) if input.is_digital else analog_value
+        abs_diff = abs(input.value - input.prev_value)
+        if (
+            (input.is_digital and input.value != input.prev_value) or
+            (not input.is_digital and abs_diff > 50)
+        ):
+            printInput(input)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
+            input.prev_value = input.value
+
+def mcp23017_event_handler(gamepad: uinput.Device, 
+                           mcp23017: MCP23017,
+                           gamepad_map: GamepadMap):
+    portA = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("A")]
+    portB = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("B")]
+    for input in gamepad_map.mcp23017_inputs:
+        input.value = portA[input.channel] if input.port == "A" else portB[input.channel]
+        if (input.value != input.prev_value):
+            printInput(input)
+            gamepad.emit(event_map[input.name], input.value, syn=False)
+            input.prev_value = input.value
+
+# Used if a digital input is passing through an ADC. Convert the value to 1 or 0
+def convertAnalogBtnValue(btnVal: int) -> int:
+    return 1 if btnVal < 512 else 0
+
+# Invert the value because the pull-up resistor causes the depressed value to 
+# be 1 and the pressed value to be 0
+def convertDigitalBtnValue(btnVal: int) -> int:
+    return 1 if btnVal == 0 else 0
+
+def printInput(input: GamepadInput):
+    #print(vars(input))
+    pass
