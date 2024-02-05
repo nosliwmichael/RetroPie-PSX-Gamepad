@@ -3,6 +3,25 @@ A Python script for reading button and joystick values in the Linux User-Space a
 
 This project was designed for a handheld RetroPie setup which uses an MCP3008 to handle Analog to Digital conversion and an MCP23017 for GPIO Expansion. The two chips combined can handle a total of 24 inputs (8 for the MCP3008 and 16 for the MCP23017). This does not include any available GPIO pins on the Raspberry Pi itself. There is support for adding button mappings through the native GPIO pins via the gamepad.json file but that is left up to the user.
 
+# Installation
+## Requirements
+* Python3
+## Steps
+1. Update / Upgrade
+    * `sudo apt update`
+    * `sudo apt upgrade`
+2. Clone this repository onto your RetroPie device.
+    * `git clone https://github.com/nosliwmichael/RetroPie-PSX-Gamepad.git`
+3. Install python-uinput
+    * `sudo pip3 install python-uinput`
+4. Install smbus2
+    * `sudo pip3 install smbus2`
+5. Update gamepad.json with correct GPIO, PIN, Channel mappings
+    * `vim ./RetroPie-PSX-Gamepad/gamepad.json`
+6. Test that the script works
+    * `sudo python3 ./RetroPie-PSX-Gamepad/src`
+7. Setup the script to run as a systemd service so that it starts up on boot.
+
 # Gamepad Configuration
 Input mappings for the gamepad can be configured with the gamepad.json file.
 Refer to the the python-uinput source code for event code mappings:
