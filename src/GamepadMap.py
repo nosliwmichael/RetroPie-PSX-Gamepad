@@ -12,7 +12,7 @@ class GamepadMap:
         MCP23017_SECTION='MCP23017'
 
         script_directory = os.path.dirname(os.path.abspath(__file__))
-        gamepad_json_file = os.path.join(script_directory, 'gamepad.json')
+        gamepad_json_file = os.path.join(script_directory, '..', 'gamepad.json')
         
         with open(gamepad_json_file) as file:
             gamepad_json = json.load(file)
@@ -32,6 +32,11 @@ class GamepadMap:
         # MCP23017
         for input in gamepad_json[MCP23017_SECTION]:
             self.mcp23017_inputs.append(mapInput(input))
+        
+    def getEvents(self):
+        return tuple(i.event_code for i in self.gpio_inputs) + \
+                tuple(i.event_code for i in self.mcp3008_inputs) + \
+                tuple(i.event_code for i in self.mcp23017_inputs)
 
 def mapInput(config) -> GamepadInput:
     return GamepadInput(

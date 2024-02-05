@@ -1,9 +1,11 @@
 # RetroPie-PSX-Gamepad
 A Python script for reading button and joystick values in the Linux User-Space and translating them into inputs for a virtual gamepad.
 
-This project was designed for a handheld RetroPie setup which uses an MCP3008 to handle Analog to Digital conversion and an MCP23017 for GPIO Expansion. The two chips combined can handle a total of 24 inputs (8 for the MCP3008 and 16 for the MCP23017). This does not include any available GPIO pins on the Raspberry Pi itself.
+This project was designed for a handheld RetroPie setup which uses an MCP3008 to handle Analog to Digital conversion and an MCP23017 for GPIO Expansion. The two chips combined can handle a total of 24 inputs (8 for the MCP3008 and 16 for the MCP23017). This does not include any available GPIO pins on the Raspberry Pi itself. There is support for adding button mappings through the native GPIO pins via the gamepad.json file but that is left up to the user.
 
 Input mappings for the gamepad can be configured with the gamepad.json file.
+Refer to the the python-uinput source code for event code mappings:
+https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 
 A complete list of the available gamepad inputs:
 * Left Joystick
@@ -36,3 +38,6 @@ A complete list of the available gamepad inputs:
 * Not yet supported
   * POWER - Shutdown the Rapsberry Pi safely
   * VOLUME - Analog wheel to adjust volume
+
+Here's an example of what it would look like to wire all of the available buttons to the MCP3008 and MCP23017 using a breadboard:
+![Joysicks and buttons wired up to an MCP3008 and MCP23017 respectively. Both ICs are connected to a Raspberry Pi 4 Model B](./docs/breadboard-setupjpg.jpg)

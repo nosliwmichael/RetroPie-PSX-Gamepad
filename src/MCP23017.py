@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from smbus2 import SMBus
-import time
 
 # This is the address of the MCP23017 when pins A0-A2 are pulled to Ground
 DEVICE = 0x20 # Device address of MCP23017
@@ -49,6 +48,9 @@ class MCP23017:
         if (port == "B"):
             registry = GPIOB
         
-        bits = list(bin(self.bus.read_byte_data(DEVICE, registry))[2:])
+        # Convert the number from read_byte_data (0-255) to a list of 8 bits
+        # The bin method will actually drop the MSB if it is zero, leaving you with only 7 bits, instead of 8.
+        # We use the zfill(8) method to ensure there are always 8 bits. The missing bits are always 0. 
+        bits = list(bin(self.bus.read_byte_data(DEVICE, registry))[2:].zfill(8))
         
-        return bits
+        return list(map(int, bits))
