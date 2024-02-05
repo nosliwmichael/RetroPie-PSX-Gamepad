@@ -32,6 +32,11 @@ class GamepadMap:
         # MCP23017
         for input in gamepad_json[MCP23017_SECTION]:
             self.mcp23017_inputs.append(mapInput(input))
+        
+    def getEvents(self):
+        return tuple(i.event_code for i in self.gpio_inputs) + \
+                tuple(i.event_code for i in self.gpio_inputs) + \
+                tuple(i.event_code for i in self.gpio_inputs)
 
 def mapInput(config) -> GamepadInput:
     return GamepadInput(
