@@ -12,6 +12,7 @@ class MCP3008:
     def __enter__(self):
         self.spi.open(self.bus, self.device)
         self.spi.max_speed_hz = 1000000 # 1MHz
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.spi.close()
