@@ -3,7 +3,20 @@ A Python script for reading button and joystick values in the Linux User-Space a
 
 This project was designed for a handheld RetroPie setup which uses an MCP3008 to handle Analog to Digital conversion and an MCP23017 for GPIO Expansion. The two chips combined can handle a total of 24 inputs (8 for the MCP3008 and 16 for the MCP23017). This does not include any available GPIO pins on the Raspberry Pi itself. There is support for adding button mappings through the native GPIO pins via the gamepad.json file but that is left up to the user.
 
-# Installation
+# Documentation
+### Datasheets
+- [MCP3008 Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/MCP3004-MCP3008-Data-Sheet-DS20001295.pdf)
+- [MCP23017 Datasheet](https://ww1.microchip.com/downloads/en/devicedoc/20001952c.pdf)
+### Tutorials
+Tutorial for using an MCP3008 with Joysticks on a Raspberry Pi:
+- [How to use a Joystick on the Raspberry Pi (with an MCP3008)](https://tutorials-raspberrypi.com/raspberry-pi-joystick-with-mcp3008/)
+
+Tutorial for using an MCP23017 with a Raspberry Pi:
+- [How to use an MCP23017 I2C with a Raspberry Pi Pt. 1](https://www.raspberrypi-spy.co.uk/2013/07/how-to-use-a-mcp23017-i2c-port-expander-with-the-raspberry-pi-part-1/)
+- [How to use an MCP23017 I2C with a Raspberry Pi Pt. 2](https://www.raspberrypi-spy.co.uk/2013/07/how-to-use-a-mcp23017-i2c-port-expander-with-the-raspberry-pi-part-2/)
+- [How to use an MCP23017 I2C with a Raspberry Pi Pt. 3](https://www.raspberrypi-spy.co.uk/2013/07/how-to-use-a-mcp23017-i2c-port-expander-with-the-raspberry-pi-part-3/)
+
+# Software Installation
 ### Requirements
 * Python3
 ### Steps
@@ -125,11 +138,4 @@ https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 
 ![MCP23017 Diagram](./docs/MCP23017-pin-layout.png)
 
-<details>
-   
-   <summary><b>Breadboard Layout</b></summary>
-   
-   ![Breadboard wiring without jumper cables.](./docs/breadboard-layout.png)
-   
-   
-</details>
+![Breadboard wiring without jumper cables.](./docs/breadboard-layout.png)
