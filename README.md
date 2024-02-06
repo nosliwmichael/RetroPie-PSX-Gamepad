@@ -121,6 +121,10 @@ https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
 
 # Wiring
 
+![MCP3008 Diagram](./docs/MCP3008-pin-layout.png)
+
+![MCP23017 Diagram](./docs/MCP23017-pin-layout.png)
+
 <details>
    
    <summary><b>Breadboard Layout</b></summary>
