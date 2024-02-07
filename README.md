@@ -3,6 +3,8 @@ A Python script for reading button and joystick values in the Linux User-Space a
 
 This project was designed for a handheld RetroPie setup which uses an MCP3008 to handle Analog to Digital conversion and an MCP23017 for GPIO Expansion. The two chips combined can handle a total of 24 inputs (8 for the MCP3008 and 16 for the MCP23017). This does not include any available GPIO pins on the Raspberry Pi itself. There is support for adding button mappings through the native GPIO pins via the gamepad.json file but that is left up to the user.
 
+**Note:** If you set the RP_PSX_GP_LOG environment variable equal to `DEBUG`, the script will print the values of whatever input device was pressed. This is useful for identifying mapping issues or seeing if your input is being registered at all. Additionally, this will also print the PORT values of the MCP23017 which can be useful for identifying which bits are on or off.
+
 # Documentation
 ### Datasheets
 - [MCP3008 Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/MCP3004-MCP3008-Data-Sheet-DS20001295.pdf)

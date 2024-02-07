@@ -1,9 +1,12 @@
+import os
 from uinput import Device
 from GamepadMap import GamepadMap
 from GamepadInput import GamepadInput
 import RPi.GPIO as GPIO
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
+
+RP_PSX_GP_LOG = os.getenv("RP_PSX_GP_LOG")
 
 # The order of events handled must match the events tuple above
 def event_handler(virtual_gamepad: Device, 
@@ -64,10 +67,12 @@ def convertDigitalBtnValue(btnVal: int) -> int:
     return 1 if btnVal == 0 else 0
 
 def printInput(input: GamepadInput):
-    #print(vars(input))
+    if (RP_PSX_GP_LOG == "DEBUG"):
+        print(vars(input))
     pass
 
 def printPorts(portA, portB):
-    #print("PORT A: {}".format(portA))
-    #print("PORT B: {}".format(portB))
+    if (RP_PSX_GP_LOG == "DEBUG"):
+        print("PORT A: {}".format(portA))
+        print("PORT B: {}".format(portB))
     pass
