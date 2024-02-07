@@ -56,7 +56,27 @@ Tutorial for using an MCP23017 with a Raspberry Pi:
 # Gamepad Configuration
 Input mappings for the gamepad can be configured with the gamepad.json file.
 Refer to the the python-uinput source code for event code mappings:
-https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
+https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py \
+The example below should be suitable in most cases unless you are looking to add/remove functionality.\
+### gamepad.json
+#### Main properties
+|Property|Description|
+|--------|-----------|
+|DEVICE_NAME|This is the name of your controller. It can be set to whatever you want and will be picked up by RetroPie to identify the gamepad. If you change this name after you've configured your input in RetroPie, it may not recognize your gamepad and ask you to reconfigure the input.|
+|VENDOR|A vendor ID. Again, this can be set to anything, it's the ID of the maker. Similary to above, if you change this value after you've configured your input in RetroPie, it may not recognize your gamepad and ask you to reconfigure the input.|
+|PRODUCT|A product ID. This can also be set to anything, it's the ID of the controller. Similary to above, if you change this value after you've configured your input in RetroPie, it may not recognize your gamepad and ask you to reconfigure the input.|
+|GPIO|This array let's you configure inputs connected directly to the Raspberry Pi.|
+|MCP3008|This array let's you configure inputs connected to the MCP3008.|
+|MCP23017|This array let's you configure inputs connected to the MCP23017.|
+
+#### Event Properties
+|Property|Description|
+|--------|-----------|
+|name|This is the name of the input. You can call this whatever you like. I named mine after their respective [Linux Input Events](https://www.kernel.org/doc/html/latest/input/gamepad.html). The main purpose here was to help with debugging.|
+|event_code|Since this project uses python-uinput to map your inputs to a virtual gamepad, these event codes need to match the ones in this file for whichever event you're trying to trigger. [python-uinput/src/ev.py](https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py). My understanding is that the first value in the tuple represents the type of input [BTN (0x01), REL (0x02), ABS(0x03)] and the second value is the actual linux event code. The ABS ones might look confusing in the gamepad.json file because they have four extra numbers in their tuple. This is strictly for joysticks where the extra values are MIN, MAX, FUZZ and FLAT. |
+|channel|This is the GPIO or Pin number on the chip that you connected the input to.|
+|port|This is only relevant to the MCP23017 to help distinguish which port (A or B) the input is on.|
+|is_digital|This is a boolean to help determine the type of input. If analog, this value should be false. Analog values have their own special event handling.|
 
 <details>
    
@@ -98,6 +118,8 @@ https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py
     }
    ```
 </details>
+
+<br/>
 
 # Wiring
 The following is a diagram of the MCP3008. This chip is responsible for converting analog signals, such as a joystick, into digital signals that are compatible with the Raspberry Pi. It uses the SPI interface for communication with the Raspberry Pi and it supports up to 8 channels. Since the MCP3008 channels output a 10 bit signal, this means the value could range between 0 (0000000000) and 1023 (1111111111).\
