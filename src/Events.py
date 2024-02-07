@@ -1,9 +1,12 @@
+import os
 from uinput import Device
 from GamepadMap import GamepadMap
 from GamepadInput import GamepadInput
 import RPi.GPIO as GPIO
 from MCP3008 import MCP3008
 from MCP23017 import MCP23017
+
+RP_PSX_GP_LOG = os.getenv("RP_PSX_GP_LOG")
 
 # The order of events handled must match the events tuple above
 def event_handler(virtual_gamepad: Device, 
@@ -18,7 +21,7 @@ def event_handler(virtual_gamepad: Device,
 def gpio_event_handler(gamepad: Device, 
                        gamepad_map: GamepadMap):
     for input in gamepad_map.gpio_inputs:
-        input.value = convertDigitalBtnValue(GPIO.input(input.channel))
+        input.value = convertDigitalBtnValue(GPIO.input(input.pin))
         if (input.value != input.prev_value):
             printInput(input)
             gamepad.emit(input.event_code[:2], input.value, syn=False)
@@ -28,7 +31,7 @@ def mcp3008_event_handler(gamepad: Device,
                           mcp3008: MCP3008, 
                           gamepad_map: GamepadMap):
     for input in gamepad_map.mcp3008_inputs:
-        analog_value = mcp3008.read(input.channel)
+        analog_value = mcp3008.read(input.pin)
         input.value = convertAnalogBtnValue(analog_value) if input.is_digital else analog_value
         abs_diff = abs(input.value - input.prev_value)
         if (
@@ -45,7 +48,7 @@ def mcp23017_event_handler(gamepad: Device,
     portA = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("A")]
     portB = [convertDigitalBtnValue(x) for x in mcp23017.readGPIO("B")]
     for input in gamepad_map.mcp23017_inputs:
-        input.value = portA[input.channel] if input.port == "A" else portB[input.channel]
+        input.value = portA[input.pin] if input.port == "A" else portB[input.pin]
         if (input.value != input.prev_value):
             printInput(input)
             printPorts(portA, portB)
@@ -64,10 +67,12 @@ def convertDigitalBtnValue(btnVal: int) -> int:
     return 1 if btnVal == 0 else 0
 
 def printInput(input: GamepadInput):
-    #print(vars(input))
+    if (RP_PSX_GP_LOG == "DEBUG"):
+        print(vars(input))
     pass
 
 def printPorts(portA, portB):
-    #print("PORT A: {}".format(portA))
-    #print("PORT B: {}".format(portB))
+    if (RP_PSX_GP_LOG == "DEBUG"):
+        print("PORT A: {}".format(portA))
+        print("PORT B: {}".format(portB))
     pass
