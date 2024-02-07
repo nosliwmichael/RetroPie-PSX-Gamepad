@@ -19,7 +19,7 @@ with MCP3008() as mcp3008, \
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     for input in GAMEPAD_MAP.gpio_inputs:
-        GPIO.setup(input.channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        GPIO.setup(input.pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
     try:
         while True:

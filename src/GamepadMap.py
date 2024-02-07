@@ -49,7 +49,7 @@ def mapInput(config) -> GamepadInput:
     return GamepadInput(
         name=config['name'],
         event_code=config['event_code'],
-        channel=config['channel'],
+        pin=config['pin'],
         port=config['port'],
         is_digital=config['is_digital']
     )

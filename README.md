@@ -47,7 +47,7 @@ Tutorial for using an MCP23017 with a Raspberry Pi:
     * `sudo pip3 install python-uinput`
 4. Install smbus2
     * `sudo pip3 install smbus2`
-5. Update gamepad.json with correct GPIO, PIN, Channel mappings
+5. Update gamepad.json with correct GPIO/PIN/Channel mappings
     * `vim ./RetroPie-PSX-Gamepad/gamepad.json`
 6. Test that the script works
     * `sudo python3 ./RetroPie-PSX-Gamepad/src`
@@ -74,52 +74,46 @@ The example below should be suitable in most cases unless you are looking to add
 |--------|-----------|
 |name|This is the name of the input. You can call this whatever you like. I named mine after their respective [Linux Input Events](https://www.kernel.org/doc/html/latest/input/gamepad.html). The main purpose here was to help with debugging.|
 |event_code|Since this project uses python-uinput to map your inputs to a virtual gamepad, these event codes need to match the ones in this file for whichever event you're trying to trigger. [python-uinput/src/ev.py](https://github.com/tuomasjjrasanen/python-uinput/blob/master/src/ev.py). My understanding is that the first value in the tuple represents the type of input [BTN (0x01), REL (0x02), ABS(0x03)] and the second value is the actual linux event code. The ABS ones might look confusing in the gamepad.json file because they have four extra numbers in their tuple. This is strictly for joysticks where the extra values are MIN, MAX, FUZZ and FLAT. |
-|channel|This is the GPIO or Pin number on the chip that you connected the input to.|
+|pin|This is the GPIO or Pin number on the chip that you connected the input to. For the MCP3008, this is going to correspond to the channel.|
 |port|This is only relevant to the MCP23017 to help distinguish which port (A or B) the input is on.|
 |is_digital|This is a boolean to help determine the type of input. If analog, this value should be false. Analog values have their own special event handling.|
 
-<details>
-   
-   <summary><b>Example of the gamepad.json configurations:</b></summary>
-   
-   ```json
-    {
-        "DEVICE_NAME": "RetroPie-PSX-Gamepad",
-        "VENDOR": 6969,
-        "PRODUCT": 420,
-        "GPIO" : [
-        ],
-        "MCP3008" : [
-            { "name": "BTN_THUMBL", "event_code": "(0x01, 0x13d)", "channel": 0, "port": null, "is_digital": true },
-            { "name": "ABS_X", "event_code": "(0x03, 0x00, 0, 1023, 50, 0)", "channel": 1, "port": null, "is_digital": false },
-            { "name": "ABS_Y", "event_code": "(0x03, 0x02, 0, 1023, 50, 0)", "channel": 2, "port": null, "is_digital": false },
-            { "name": "BTN_THUMBR", "event_code": "(0x01, 0x13e)", "channel": 5, "port": null, "is_digital": true },
-            { "name": "ABS_RX", "event_code": "(0x03, 0x03, 0, 1023, 50, 0)", "channel": 6, "port": null, "is_digital": false },
-            { "name": "ABS_RY", "event_code": "(0x03, 0x04, 0, 1023, 50, 0)", "channel": 7, "port": null, "is_digital": false }
-        ],
-        "MCP23017" : [
-            { "name": "BTN_MODE", "event_code": "(0x01, 0x13c)", "channel": 7, "port": "A", "is_digital": true },
-            { "name": "BTN_START", "event_code": "(0x01, 0x13b)", "channel": 6, "port": "A", "is_digital": true },
-            { "name": "BTN_SELECT", "event_code": "(0x01, 0x13a)", "channel": 5, "port": "A", "is_digital": true },
-            { "name": "BTN_TL", "event_code": "(0x01, 0x136)", "channel": 4, "port": "A", "is_digital": true },
-            { "name": "BTN_TR", "event_code": "(0x01, 0x137)", "channel": 3, "port": "A", "is_digital": true },
-            { "name": "BTN_TL2", "event_code": "(0x01, 0x138)", "channel": 2, "port": "A", "is_digital": true },
-            { "name": "BTN_TR2", "event_code": "(0x01, 0x139)", "channel": 1, "port": "A", "is_digital": true },
+#### Example of the gamepad.json configurations:
+```json
+{
+    "DEVICE_NAME": "RetroPie-PSX-Gamepad",
+    "VENDOR": 6969,
+    "PRODUCT": 420,
+    "GPIO" : [
+    ],
+    "MCP3008" : [
+        { "name": "BTN_THUMBL", "event_code": "(0x01, 0x13d)", "pin": 0, "port": null, "is_digital": true },
+        { "name": "ABS_X", "event_code": "(0x03, 0x00, 0, 1023, 50, 0)", "pin": 1, "port": null, "is_digital": false },
+        { "name": "ABS_Y", "event_code": "(0x03, 0x02, 0, 1023, 50, 0)", "pin": 2, "port": null, "is_digital": false },
+        { "name": "BTN_THUMBR", "event_code": "(0x01, 0x13e)", "pin": 5, "port": null, "is_digital": true },
+        { "name": "ABS_RX", "event_code": "(0x03, 0x03, 0, 1023, 50, 0)", "pin": 6, "port": null, "is_digital": false },
+        { "name": "ABS_RY", "event_code": "(0x03, 0x04, 0, 1023, 50, 0)", "pin": 7, "port": null, "is_digital": false }
+    ],
+    "MCP23017" : [
+        { "name": "BTN_MODE", "event_code": "(0x01, 0x13c)", "pin": 7, "port": "A", "is_digital": true },
+        { "name": "BTN_START", "event_code": "(0x01, 0x13b)", "pin": 6, "port": "A", "is_digital": true },
+        { "name": "BTN_SELECT", "event_code": "(0x01, 0x13a)", "pin": 5, "port": "A", "is_digital": true },
+        { "name": "BTN_TL", "event_code": "(0x01, 0x136)", "pin": 4, "port": "A", "is_digital": true },
+        { "name": "BTN_TR", "event_code": "(0x01, 0x137)", "pin": 3, "port": "A", "is_digital": true },
+        { "name": "BTN_TL2", "event_code": "(0x01, 0x138)", "pin": 2, "port": "A", "is_digital": true },
+        { "name": "BTN_TR2", "event_code": "(0x01, 0x139)", "pin": 1, "port": "A", "is_digital": true },
 
-            { "name": "BTN_DPAD_LEFT", "event_code": "(0x01, 0x222)", "channel": 7, "port": "B", "is_digital": true },
-            { "name": "BTN_DPAD_UP", "event_code": "(0x01, 0x220)", "channel": 6, "port": "B", "is_digital": true },
-            { "name": "BTN_DPAD_RIGHT", "event_code": "(0x01, 0x223)", "channel": 5, "port": "B", "is_digital": true },
-            { "name": "BTN_DPAD_DOWN", "event_code": "(0x01, 0x221)", "channel": 4, "port": "B", "is_digital": true },
-            { "name": "BTN_SOUTH", "event_code": "(0x01, 0x130)", "channel": 3, "port": "B", "is_digital": true },
-            { "name": "BTN_WEST", "event_code": "(0x01, 0x134)", "channel": 2, "port": "B", "is_digital": true },
-            { "name": "BTN_NORTH", "event_code": "(0x01, 0x133)", "channel": 1, "port": "B", "is_digital": true },
-            { "name": "BTN_EAST", "event_code": "(0x01, 0x131)", "channel": 0, "port": "B", "is_digital": true }
-        ]
-    }
-   ```
-</details>
-
-<br/>
+        { "name": "BTN_DPAD_LEFT", "event_code": "(0x01, 0x222)", "pin": 7, "port": "B", "is_digital": true },
+        { "name": "BTN_DPAD_UP", "event_code": "(0x01, 0x220)", "pin": 6, "port": "B", "is_digital": true },
+        { "name": "BTN_DPAD_RIGHT", "event_code": "(0x01, 0x223)", "pin": 5, "port": "B", "is_digital": true },
+        { "name": "BTN_DPAD_DOWN", "event_code": "(0x01, 0x221)", "pin": 4, "port": "B", "is_digital": true },
+        { "name": "BTN_SOUTH", "event_code": "(0x01, 0x130)", "pin": 3, "port": "B", "is_digital": true },
+        { "name": "BTN_WEST", "event_code": "(0x01, 0x134)", "pin": 2, "port": "B", "is_digital": true },
+        { "name": "BTN_NORTH", "event_code": "(0x01, 0x133)", "pin": 1, "port": "B", "is_digital": true },
+        { "name": "BTN_EAST", "event_code": "(0x01, 0x131)", "pin": 0, "port": "B", "is_digital": true }
+    ]
+}
+```
 
 # Wiring
 The following is a diagram of the MCP3008. This chip is responsible for converting analog signals, such as a joystick, into digital signals that are compatible with the Raspberry Pi. It uses the SPI interface for communication with the Raspberry Pi and it supports up to 8 channels. Since the MCP3008 channels output a 10 bit signal, this means the value could range between 0 (0000000000) and 1023 (1111111111).\
