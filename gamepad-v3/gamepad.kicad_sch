@@ -1,0 +1,7825 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "0de7c742-ee57-4fe4-883c-2f3e07f18363")
+	(paper "A4")
+	(lib_symbols
+		(symbol "gamepad-eagle-import:5628"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at -3 4.4 0)
+				(effects
+					(font
+						(size 0.8 0.68)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "gamepad:5628"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "5628_1_0"
+				(arc
+					(start -3 -2)
+					(mid -2.7071 -2.7071)
+					(end -2 -3)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2 4)
+					(mid -2.7071 3.7071)
+					(end -3 3)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3)
+					(mid 0.7071 -2.7071)
+					(end 1 -2)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3 3) (xy -3 -2)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2 -3) (xy 0 -3)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2 4) (xy 0 4)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1 -2) (xy 1 3)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1 3)
+					(mid 0.7071 3.7071)
+					(end 0 4)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "AD1"
+					(at -1.6 2.8 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "AD2"
+					(at -1.6 -0.2 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "GND"
+					(at -1.8 -1.2 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "GND"
+					(at -1.8 1.8 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "SW"
+					(at -1.4 0.8 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "VCC"
+					(at -1.8 -2.2 0)
+					(effects
+						(font
+							(size 0.5 0.425)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 3 180)
+					(length 2.54)
+					(name "AD1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "AD1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 0 180)
+					(length 2.54)
+					(name "AD2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "AD2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 2 180)
+					(length 2.54)
+					(name "GND1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "GND1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 -1 180)
+					(length 2.54)
+					(name "GND2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "GND2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 1 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "SW"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.46 -2 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "VCC"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:CONN_05X2PTH"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -3.81 8.128 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -3.81 -9.906 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "gamepad:2X5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections\n\nFor AVR SPI programming port, see special device with nice symbol: \"AVR_SPI_PROG_5x2.dev\"\n\nYou can populate with any combo of single row headers, but if you'd like an exact match, check these:\n\n• https://www.sparkfun.com/products/778  2x5 AVR ICSP Male Header (PRT-00778)\n• https://www.sparkfun.com/products/8506  2x5 Pin Shrouded Header (PRT-08506)\n\nOn any of the 0.1 inch spaced packages, you can populate with these:\n\n• https://www.sparkfun.com/products/116  Break Away Headers - Straight (PRT-00116)\n• https://www.sparkfun.com/products/553  Break Away Male Headers - Right Angle (PRT-00553)\n• https://www.sparkfun.com/products/115  Female Headers (PRT-00115)\n• https://www.sparkfun.com/products/117  Break Away Headers - Machine Pin (PRT-00117)\n• https://www.sparkfun.com/products/743  Break Away Female Headers - Swiss Machine Pin (PRT-00743)\n\nSpecial note: the shrouded connector mates well with our 5x2 ribbon cables:\n\n• https://www.sparkfun.com/products/8535  2x5 Pin IDC Ribbon Cable (PRT-08535)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CONN_05X2PTH_1_0"
+				(polyline
+					(pts
+						(xy -3.81 7.62) (xy -3.81 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 7.62) (xy 3.81 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -2.54 -5.08)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.08) (xy -2.54 5.08)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 2.54 5.08)
+					)
+					(stroke
+						(width 0.6096)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -7.62) (xy -3.81 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -7.62) (xy 3.81 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 5.08)
+					(name "10"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 5.08)
+					(name "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 5.08)
+					(name "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 5.08)
+					(name "6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 5.08)
+					(name "7"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 5.08)
+					(name "8"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 5.08)
+					(name "9"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:GND"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_1_0"
+				(polyline
+					(pts
+						(xy -1.905 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:MCP23017SP"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "IC"
+				(at -10.16 24.13 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -10.16 -25.4 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "gamepad:DIL28-3"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf\n\nSource: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP23017SP_1_0"
+				(polyline
+					(pts
+						(xy -10.16 -22.86) (xy -10.16 22.86)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 22.86) (xy 10.16 22.86)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -22.86) (xy -10.16 -22.86)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 22.86) (xy 10.16 -22.86)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -2.54 180)
+					(length 2.54)
+					(name "GPB0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 -20.32 0)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 -5.08 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "A0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -12.7 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -15.24 0)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 15.24 0)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -12.7 7.62 0)
+					(length 2.54)
+					(name "INTB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -5.08 180)
+					(length 2.54)
+					(name "GPB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "INTA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 20.32 180)
+					(length 2.54)
+					(name "GPA0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 17.78 180)
+					(length 2.54)
+					(name "GPA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 15.24 180)
+					(length 2.54)
+					(name "GPA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 12.7 180)
+					(length 2.54)
+					(name "GPA3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "GPA4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 7.62 180)
+					(length 2.54)
+					(name "GPA5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(name "GPA6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "GPA7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -7.62 180)
+					(length 2.54)
+					(name "GPB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -10.16 180)
+					(length 2.54)
+					(name "GPB3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -12.7 180)
+					(length 2.54)
+					(name "GPB4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -15.24 180)
+					(length 2.54)
+					(name "GPB5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -17.78 180)
+					(length 2.54)
+					(name "GPB6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -20.32 180)
+					(length 2.54)
+					(name "GPB7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 20.32 0)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:MCP3008"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "IC"
+				(at 10.16 12.7 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify right top)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "gamepad:DIL16"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP3008_1_0"
+				(polyline
+					(pts
+						(xy -7.62 -12.7) (xy 10.16 -12.7)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 10.16) (xy -7.62 -12.7)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -12.7) (xy 10.16 10.16)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 10.16) (xy -7.62 10.16)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "MCP3008"
+					(at -7.62 -15.24 0)
+					(effects
+						(font
+							(size 1.778 1.5113)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin input line
+					(at -12.7 7.62 0)
+					(length 5.08)
+					(name "CH0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at 15.24 -7.62 180)
+					(length 5.08)
+					(name "/CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 -5.08 180)
+					(length 5.08)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -2.54 180)
+					(length 5.08)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 2.54 180)
+					(length 5.08)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 5.08 180)
+					(length 5.08)
+					(name "VREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 7.62 180)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 5.08 0)
+					(length 5.08)
+					(name "CH1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "CH2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 0 0)
+					(length 5.08)
+					(name "CH3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 5.08)
+					(name "CH4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -5.08 0)
+					(length 5.08)
+					(name "CH5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -7.62 0)
+					(length 5.08)
+					(name "CH6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -10.16 0)
+					(length 5.08)
+					(name "CH7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 -10.16 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:MJTP2205"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at -3 2 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "gamepad:MJTP2205"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MJTP2205_1_0"
+				(polyline
+					(pts
+						(xy -3 -2) (xy -1 -2)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3 1) (xy -3 -2)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1 -2) (xy 0 -1)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1 1) (xy -3 1)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2) (xy 3 -2)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2) (xy -1 1)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3 -2) (xy 3 1)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3 1) (xy 0 1)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "GND"
+					(at -6.064 -0.776 0)
+					(effects
+						(font
+							(size 0.8128 0.6908)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "IN"
+					(at 3.588 -0.776 0)
+					(effects
+						(font
+							(size 0.8128 0.6908)
+						)
+						(justify left bottom)
+					)
+				)
+				(pin bidirectional line
+					(at -3.46 1 0)
+					(length 2.54)
+					(name "GND$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "GND$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -3.46 -2 0)
+					(length 2.54)
+					(name "GND$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "GND$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 3.46 1 180)
+					(length 2.54)
+					(name "IN$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "IN$1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 3.46 -2 180)
+					(length 2.54)
+					(name "IN$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "IN$2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "S"
+				(at 0 1.524 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Value" ""
+				(at 0 -0.508 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify top)
+				)
+			)
+			(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Momentary Switch (Pushbutton) - SPST\n\nNormally-open (NO) SPST momentary switches (buttons, pushbuttons).\n\nVariants PTH-12MM - 12mm square, through-hole\n\n• https://www.sparkfun.com/products/9190 Momentary Pushbutton Switch - 12mm Square (COM-09190)\n\nPTH-6.0MM, PTH-6.0MM-KIT - 6.0mm square, through-hole\n\n• https://www.sparkfun.com/products/97 Mini Pushbutton Switch (COM-00097)\n• KIT package intended for soldering kit's - only one side of pads' copper is exposed.\n\nPTH-RIGHT-ANGLE-KIT - Right-angle, through-hole\n\n• https://www.sparkfun.com/products/10791 Right Angle Tactile Button - Used on https://www.sparkfun.com/products/11734  SparkFun BigTime Watch Kit\n\nSMD-12MM - 12mm square, surface-mount\n\n• https://www.sparkfun.com/products/12993 Tactile Button - SMD (12mm) (COM-12993)\n• Used on https://www.sparkfun.com/products/11888 SparkFun PicoBoard\n\nSMD-4.5MM - 4.5mm Square Trackball Switch\n\n• Used on https://www.sparkfun.com/products/13169 SparkFun Blackberry Trackballer Breakout\n\nSMD-4.6MMX2.8MM -  4.60mm x 2.80mm, surface mount\n\n• Used on https://www.sparkfun.com/products/17717 SparkFun Pro Micro - RP2040\n\nSMD-5.2MM, SMD-5.2-REDUNDANT - 5.2mm square, surface-mount\n\n• https://www.sparkfun.com/products/8720 Mini Pushbutton Switch - SMD (COM-08720)\n• Used on https://www.sparkfun.com/products/11114 Arduino Pro Mini\n• REDUNDANT package connects both switch circuits together\n\nSMD-6.0X3.5MM - 6.0 x 3.5mm, surface mount\n\n• https://www.sparkfun.com/products/8229 Momentary Reset Switch SMD (COM-08229)\n\nSMD-6.2MM-TALL - 6.2mm square, surface mount\n\n• https://www.sparkfun.com/products/12992 Tactile Button - SMD (6mm)\n• Used on https://www.sparkfun.com/products/12651 SparkFun Digital Sandbox\n\nSMD-RIGHT-ANGLE - Right-angle, surface mount\n\n• Used on https://www.sparkfun.com/products/13036 SparkFun Block for Intel® Edison - Arduino"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MOMENTARY-SWITCH-SPST-PTH-6.0MM_1_0"
+				(circle
+					(center -2.54 0)
+					(radius 0.127)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 0)
+					(radius 0.127)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:R-US_0207/7"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -3.81 1.4986 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -3.81 -3.302 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "gamepad:0207_7"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RESISTOR, American symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R-US_0207/7_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.159 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.159 1.016) (xy -1.524 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -1.016) (xy -0.889 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.889 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 -1.016) (xy 0.381 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.016) (xy 1.651 1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 1.016) (xy 2.286 -1.016)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.016) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "gamepad-eagle-import:VCC"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#P+"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 90)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VCC_1_0"
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.27 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 185.6 141.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55865f57-5cd8-479c-971d-39413f8d2578")
+	)
+	(junction
+		(at 149.86 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7149a97e-e4e3-4ca7-85af-79b4c3124dcc")
+	)
+	(junction
+		(at 73.66 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac488306-2801-423c-ad69-3e4c110d2ff3")
+	)
+	(junction
+		(at 155.9 153.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1e60f1a-6e28-4770-9f11-6aa48892ef6a")
+	)
+	(junction
+		(at 73.66 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2430d0b-eb42-4f93-88d5-5fcb855bf4be")
+	)
+	(wire
+		(pts
+			(xy 106.68 152.84) (xy 106.68 152.908)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "00752691-f886-46a6-a9ff-520e7c6c3082")
+	)
+	(wire
+		(pts
+			(xy 208.28 106.68) (xy 205.74 106.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "00cafefa-4288-4060-a955-20701beed14d")
+	)
+	(wire
+		(pts
+			(xy 99.06 98.84) (xy 99.6 98.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "00e4832e-9747-4378-9a77-75392f9942e2")
+	)
+	(wire
+		(pts
+			(xy 185.42 156.46) (xy 185.42 156.464)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0164a2c9-b2ce-41a6-96c7-ed83d317ab69")
+	)
+	(wire
+		(pts
+			(xy 73.66 129.98) (xy 73.66 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0245615e-4b7d-4c67-adf0-b3442f8c3435")
+	)
+	(wire
+		(pts
+			(xy 144.78 121.92) (xy 149.86 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "06fba417-6484-4d17-ae88-9b08850ebf8a")
+	)
+	(wire
+		(pts
+			(xy 99.06 86.84) (xy 99.6 86.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "08f90600-fb40-43d8-bafe-76bfa8378c27")
+	)
+	(wire
+		(pts
+			(xy 110.06 99.84) (xy 99.06 99.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "094cdd48-0fd9-4cce-a8c2-db74f3362c54")
+	)
+	(wire
+		(pts
+			(xy 77.38 140.14) (xy 73.66 140.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "096e3b03-f4ed-456a-aa78-416c27ff177f")
+	)
+	(wire
+		(pts
+			(xy 223.52 116.84) (xy 226.06 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0e19aa29-19da-4f7b-9e39-654423d543ac")
+	)
+	(wire
+		(pts
+			(xy 106.68 157.92) (xy 106.68 157.988)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0ebde784-a46c-4070-94b9-079ac16d4b92")
+	)
+	(wire
+		(pts
+			(xy 106.68 129.98) (xy 106.68 130.048)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1792cff1-c393-486f-b696-2161d2f380e2")
+	)
+	(wire
+		(pts
+			(xy 183.84 151.38) (xy 185.42 151.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1998b57c-77e5-4eeb-b51a-238f0a61625a")
+	)
+	(wire
+		(pts
+			(xy 142.24 146.3) (xy 155.9 146.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1ae552d7-dcc3-4034-ab39-987fa5bc03e6")
+	)
+	(wire
+		(pts
+			(xy 183.84 141.22) (xy 185.6 141.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1e733391-e5c3-466c-8206-96ebb0c73e28")
+	)
+	(wire
+		(pts
+			(xy 152.4 141.22) (xy 152.4 141.224)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1e9ced13-8240-4e31-ac88-d66195b96ad9")
+	)
+	(wire
+		(pts
+			(xy 106.68 165.54) (xy 106.68 165.608)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "20485095-a22f-40e5-8029-9168213b3378")
+	)
+	(wire
+		(pts
+			(xy 165.1 86.36) (xy 167.64 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "218570ce-8c39-4af4-84c9-2a3b03b060e7")
+	)
+	(wire
+		(pts
+			(xy 102.78 165.54) (xy 106.68 165.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "26251e83-607b-4858-858c-38b4a947266e")
+	)
+	(wire
+		(pts
+			(xy 183.84 159) (xy 187.86 159)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "28b3717e-f76d-42cb-a9a4-9a901e6317a7")
+	)
+	(wire
+		(pts
+			(xy 223.52 111.76) (xy 226.06 111.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2d4d6153-0af5-400f-84f6-de1a6f4ba317")
+	)
+	(wire
+		(pts
+			(xy 73.66 142.68) (xy 73.66 142.748)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2f2150e7-dbc2-4b8c-b6dc-c7cc931fc8f5")
+	)
+	(wire
+		(pts
+			(xy 77.38 165.54) (xy 73.66 165.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "313002cd-16f0-4653-8d39-74af904e20b2")
+	)
+	(wire
+		(pts
+			(xy 110.06 87.84) (xy 99.06 87.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3202d169-fe12-4f5a-9ded-fa261cb74a2d")
+	)
+	(wire
+		(pts
+			(xy 152.4 148.84) (xy 152.4 148.844)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "33d20c11-f7d9-4ef8-b1a7-f04b5a735154")
+	)
+	(wire
+		(pts
+			(xy 155.9 151.38) (xy 152.4 151.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3540bba7-2cc6-469e-bd45-ed327f0bb79b")
+	)
+	(wire
+		(pts
+			(xy 102.78 157.92) (xy 106.68 157.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "37be3aa3-9485-4f5d-bad4-a2869487ebbb")
+	)
+	(wire
+		(pts
+			(xy 183.84 146.3) (xy 183.84 146.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "393fdb51-053a-409d-8a1b-99ee6e2e9949")
+	)
+	(wire
+		(pts
+			(xy 99.06 103.84) (xy 106.06 103.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3a1bc932-fe94-4490-abed-7563c15cd4e7")
+	)
+	(wire
+		(pts
+			(xy 73.66 132.08) (xy 71.12 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3aaa8824-a347-4f3c-81ea-ade2d4f036a2")
+	)
+	(wire
+		(pts
+			(xy 73.66 152.84) (xy 73.66 152.908)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3c9db28f-a4a8-42d1-a1a4-eadec08cbb1f")
+	)
+	(wire
+		(pts
+			(xy 77.38 163) (xy 73.66 163)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3cf112f5-d737-4477-8f49-dda154ecac4e")
+	)
+	(wire
+		(pts
+			(xy 155.9 143.76) (xy 152.4 143.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3cfb6cf3-d795-4619-a1e3-fb64db71d293")
+	)
+	(wire
+		(pts
+			(xy 183.84 156.46) (xy 185.42 156.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3d0857f6-e91d-4262-9edf-24059a341b60")
+	)
+	(wire
+		(pts
+			(xy 185.42 148.84) (xy 185.42 148.844)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3fd2d4e2-99a1-4e82-b516-0447fabf00cd")
+	)
+	(wire
+		(pts
+			(xy 73.66 140.14) (xy 73.66 140.208)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "410ee8b6-d606-4466-a741-258a13c465eb")
+	)
+	(wire
+		(pts
+			(xy 185.42 151.38) (xy 185.42 151.384)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "41b26db9-ab01-4a00-88a4-f94c2196dced")
+	)
+	(wire
+		(pts
+			(xy 187.86 159) (xy 195.48 159.04)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4783bf47-230c-40fd-b6f0-d3abbd631cef")
+	)
+	(wire
+		(pts
+			(xy 103.06 67.84) (xy 103.6 67.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "499923cb-ddd4-403f-a9c7-fe0f8c22bdc0")
+	)
+	(wire
+		(pts
+			(xy 165.1 71.12) (xy 167.64 71.12)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4a51e5fc-15ba-49e0-ac08-573bb7a2e01a")
+	)
+	(wire
+		(pts
+			(xy 208.28 111.76) (xy 205.74 111.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4a73794d-532e-4ed7-85fc-6f568a75201b")
+	)
+	(wire
+		(pts
+			(xy 103.06 73.84) (xy 103.6 73.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4cafd47c-c046-4d25-acf6-3beb6c39d4fe")
+	)
+	(wire
+		(pts
+			(xy 103.06 64.84) (xy 103.6 64.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d4bd8de-7791-435e-b396-949f096bb894")
+	)
+	(wire
+		(pts
+			(xy 145.74 153.924) (xy 142.24 153.924)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d858c65-0d31-46b7-b5d9-75fe29e7312f")
+	)
+	(wire
+		(pts
+			(xy 99.06 100.84) (xy 106.6 100.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d98ed64-e934-4a7a-9ac3-0b372e50b258")
+	)
+	(wire
+		(pts
+			(xy 165.1 50.8) (xy 167.64 50.8)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4e34e075-3133-462c-a662-090cd637c710")
+	)
+	(wire
+		(pts
+			(xy 155.9 159) (xy 152.4 159)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4e6856e5-c7b3-47ee-9954-2caceac57edc")
+	)
+	(wire
+		(pts
+			(xy 144.78 153.92) (xy 144.78 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "50b0177c-7f85-4532-af3b-d40ee882c704")
+	)
+	(wire
+		(pts
+			(xy 102.78 160.46) (xy 106.68 160.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "526af18c-3f1f-4bfb-b2c3-fa80e9396752")
+	)
+	(wire
+		(pts
+			(xy 73.66 170.62) (xy 73.66 165.54)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5447d261-4780-4c52-be55-6111dafdd585")
+	)
+	(wire
+		(pts
+			(xy 77.38 152.84) (xy 73.66 152.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "55a69313-cdb1-4ce9-a8bb-5bc93b1934e8")
+	)
+	(wire
+		(pts
+			(xy 102.78 152.84) (xy 106.68 152.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "57c9c685-cd4d-4fd6-94d7-f12cfefb2581")
+	)
+	(wire
+		(pts
+			(xy 155.9 153.92) (xy 145.74 153.924)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "587d324d-6a8b-4941-822b-2dd7d9ea2235")
+	)
+	(wire
+		(pts
+			(xy 114.06 90.84) (xy 99.06 90.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5a7b4cfb-3447-45e3-b271-9d5987809ad4")
+	)
+	(wire
+		(pts
+			(xy 208.28 109.22) (xy 205.74 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5b9bac68-995e-4bf8-87d7-cee0c97f6c85")
+	)
+	(wire
+		(pts
+			(xy 185.42 153.92) (xy 185.42 153.924)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5dc902d9-02b0-4850-b6d3-deb2911e93f4")
+	)
+	(wire
+		(pts
+			(xy 165.1 58.42) (xy 167.64 58.42)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5e696497-2cfe-4237-ab53-19afa4610eef")
+	)
+	(wire
+		(pts
+			(xy 223.52 106.68) (xy 226.06 106.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "622e448b-894c-4d65-a71f-160ce166b203")
+	)
+	(wire
+		(pts
+			(xy 104.14 43.18) (xy 106.68 43.18)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "64c72ef4-e3e0-433f-af5d-9a2219f7ceea")
+	)
+	(wire
+		(pts
+			(xy 106.68 145.22) (xy 106.68 145.288)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "657b6383-c702-4064-9b32-4f29b5ed7894")
+	)
+	(wire
+		(pts
+			(xy 104.14 50.8) (xy 106.68 50.8)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6733123d-b104-417f-9244-b9eaefc4d3b8")
+	)
+	(wire
+		(pts
+			(xy 104.14 58.42) (xy 106.68 58.42)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6a17d289-3635-4fe6-8b1a-f4eda9972c4d")
+	)
+	(wire
+		(pts
+			(xy 155.9 148.84) (xy 152.4 148.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6bf7dab4-9f64-431a-9621-ef3798ce5781")
+	)
+	(wire
+		(pts
+			(xy 185.6 143.76) (xy 185.6 141.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6d09a61e-fd5a-4449-824b-a8720512972d")
+	)
+	(wire
+		(pts
+			(xy 73.66 160.46) (xy 73.66 163)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6ef6c315-94a6-43de-a8f5-c7149ae45369")
+	)
+	(wire
+		(pts
+			(xy 99.06 91.84) (xy 106.06 91.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "70120628-af35-494b-b56d-8ec7c22bea43")
+	)
+	(wire
+		(pts
+			(xy 73.66 155.38) (xy 73.66 155.448)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "70affd5e-4926-4c23-9b3c-66831d910c2d")
+	)
+	(wire
+		(pts
+			(xy 165.1 78.74) (xy 167.64 78.74)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "72019aa2-ce63-41ca-86ed-833d7bef1f10")
+	)
+	(wire
+		(pts
+			(xy 208.28 116.84) (xy 205.74 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "743e548e-a79a-49a9-95ed-79e065747b5b")
+	)
+	(wire
+		(pts
+			(xy 73.66 165.1) (xy 71.12 165.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "744cf59c-f1c7-4757-b8fa-ff92b77195ca")
+	)
+	(wire
+		(pts
+			(xy 223.52 109.22) (xy 226.06 109.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7a33acc5-dd19-4f1f-aa74-359a4ee00081")
+	)
+	(wire
+		(pts
+			(xy 102.78 170.62) (xy 106.68 170.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7ab3ccad-e81c-4c68-b33a-9dd4e99046eb")
+	)
+	(wire
+		(pts
+			(xy 106.68 160.46) (xy 106.68 160.528)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7c0f8e16-1fe4-4bd0-a4a2-e0fb053d3c15")
+	)
+	(wire
+		(pts
+			(xy 102.78 132.52) (xy 106.68 132.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7c294aff-4675-4c53-b076-a08d69f6fc30")
+	)
+	(wire
+		(pts
+			(xy 102.78 140.14) (xy 106.68 140.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7cb1932e-45a2-4513-8f3f-f3dbe2da0bc4")
+	)
+	(wire
+		(pts
+			(xy 77.38 142.68) (xy 73.66 142.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "82f6f832-aba0-4c2c-a058-bab3f7e970af")
+	)
+	(wire
+		(pts
+			(xy 102.78 129.98) (xy 106.68 129.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "83b1d323-f764-4e5b-ab91-eb133ef6f1f4")
+	)
+	(wire
+		(pts
+			(xy 102.78 168.08) (xy 106.68 168.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "89f1ce13-3dc7-44b3-9e04-a5eac6550379")
+	)
+	(wire
+		(pts
+			(xy 208.28 114.3) (xy 205.74 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8bfdf225-c89e-42db-8c4f-9c88eb9a5e36")
+	)
+	(wire
+		(pts
+			(xy 152.4 159) (xy 152.4 159.004)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8dfcba1a-c30c-4372-8734-333201c7d4bb")
+	)
+	(wire
+		(pts
+			(xy 155.9 141.22) (xy 152.4 141.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "96504b93-bf41-4368-a950-1803c5740e36")
+	)
+	(wire
+		(pts
+			(xy 154.94 121.92) (xy 149.86 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "967d4af3-c9ea-486b-9bdb-b7f89a387064")
+	)
+	(wire
+		(pts
+			(xy 147.32 137.16) (xy 154.94 137.16)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "99c5e86a-7dfe-4a13-8208-5c9285a0fd8a")
+	)
+	(wire
+		(pts
+			(xy 99.06 89.84) (xy 99.6 89.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9b64486c-8b2e-4b8f-8c2c-f57ac1d5994a")
+	)
+	(wire
+		(pts
+			(xy 99.06 88.84) (xy 106.6 88.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9bdffa99-cfd3-401e-8cd1-dd110766c4e3")
+	)
+	(wire
+		(pts
+			(xy 77.38 160.46) (xy 73.66 160.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9e4779d3-f505-4aa6-a9f7-1b06021f93ea")
+	)
+	(wire
+		(pts
+			(xy 102.78 155.38) (xy 106.68 155.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9f5f5fe5-11a7-446b-9569-5dc194cb827a")
+	)
+	(wire
+		(pts
+			(xy 185.6 141.24) (xy 187.66 141.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9f990921-f1c3-4e59-a1e6-d6735d91564e")
+	)
+	(wire
+		(pts
+			(xy 155.9 156.46) (xy 152.4 156.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a1001ce5-bed2-4030-8d40-8fd3572a46bc")
+	)
+	(wire
+		(pts
+			(xy 104.14 35.56) (xy 106.68 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a28481fc-9757-47ad-a76c-0891c5857530")
+	)
+	(wire
+		(pts
+			(xy 106.68 163) (xy 106.68 163.068)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a38cbaaf-017b-4b55-84bc-d0323fca1811")
+	)
+	(wire
+		(pts
+			(xy 102.78 135.06) (xy 106.68 135.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a6da149a-1f4d-4a87-870f-7810dd635fa0")
+	)
+	(wire
+		(pts
+			(xy 77.38 135.06) (xy 73.66 135.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "abe1533a-2b80-497a-a970-77e781858904")
+	)
+	(wire
+		(pts
+			(xy 77.38 129.98) (xy 73.66 129.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "af24b5e9-12f1-4944-9183-ceac1bb22155")
+	)
+	(wire
+		(pts
+			(xy 102.78 147.76) (xy 106.68 147.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b321554b-dcf0-4c3c-b26a-6705900ebb3e")
+	)
+	(wire
+		(pts
+			(xy 73.66 135.06) (xy 73.66 132.08)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b356c8c5-d8f9-4b00-bfec-2f297371d0e4")
+	)
+	(wire
+		(pts
+			(xy 152.4 156.46) (xy 152.4 156.464)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b41dcbed-18e5-43be-a1c7-241ff9d9d84a")
+	)
+	(wire
+		(pts
+			(xy 155.9 153.92) (xy 144.78 153.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b61c9763-1679-4732-a87e-c747187883a2")
+	)
+	(wire
+		(pts
+			(xy 99.06 101.84) (xy 99.6 101.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b70a442d-7282-41a7-a0a3-9d72ae085bbe")
+	)
+	(wire
+		(pts
+			(xy 183.84 143.76) (xy 185.6 143.76)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b751106d-bdea-4ced-a008-d1cf71496385")
+	)
+	(wire
+		(pts
+			(xy 102.78 145.22) (xy 106.68 145.22)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b890407e-4e2b-4d14-8824-a2bfb600cc7c")
+	)
+	(wire
+		(pts
+			(xy 102.78 137.6) (xy 106.68 137.6)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bbc76cdb-3c5c-49d7-86bd-f4b88511427b")
+	)
+	(wire
+		(pts
+			(xy 102.78 142.68) (xy 106.68 142.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bc47f592-bafe-4706-bbfe-1dda1174f06d")
+	)
+	(wire
+		(pts
+			(xy 106.68 137.6) (xy 106.68 137.668)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bcdf4f72-a8a6-4a87-b60e-15a2c68324ae")
+	)
+	(wire
+		(pts
+			(xy 144.78 124.46) (xy 144.78 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bf7bf75d-dbe0-41a5-b733-9bef039f3d0e")
+	)
+	(wire
+		(pts
+			(xy 183.84 146.24) (xy 195.42 146.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c0c2a028-998f-4589-afee-b2e44875f6d1")
+	)
+	(wire
+		(pts
+			(xy 165.1 35.56) (xy 167.64 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c20038e3-c2d0-48e8-baf2-db0b820fe5d7")
+	)
+	(wire
+		(pts
+			(xy 102.78 163) (xy 106.68 163)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c5e524c2-eaac-4236-864a-d8fc963a0144")
+	)
+	(wire
+		(pts
+			(xy 77.38 170.62) (xy 73.66 170.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c8117e0d-f25b-498b-95d0-4f0e5e20a21d")
+	)
+	(wire
+		(pts
+			(xy 106.68 155.38) (xy 106.68 155.448)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "cbd606d3-8feb-4e57-b0c7-6747418542f8")
+	)
+	(wire
+		(pts
+			(xy 106.68 140.14) (xy 106.68 140.208)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "cd866d16-31c4-44d4-9be1-39b19a63605d")
+	)
+	(wire
+		(pts
+			(xy 106.68 170.62) (xy 106.68 170.688)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ce0e089e-240a-4b68-8767-28b323f22db3")
+	)
+	(wire
+		(pts
+			(xy 103.06 76.84) (xy 103.6 76.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d18fdabf-80f4-460b-bae4-e3aa1eead283")
+	)
+	(wire
+		(pts
+			(xy 183.84 148.84) (xy 185.42 148.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d80d7df0-5a61-4cff-aa68-a895a8605e46")
+	)
+	(wire
+		(pts
+			(xy 152.4 143.76) (xy 152.4 143.764)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d83f4d5e-3188-4a17-bd47-60070f89ef85")
+	)
+	(wire
+		(pts
+			(xy 147.32 146.3) (xy 147.32 137.16)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d89d1740-8c5a-4bc6-9f0d-92f27bda3d19")
+	)
+	(wire
+		(pts
+			(xy 114.06 102.84) (xy 99.06 102.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d976eae2-2177-4474-b56f-da9d90798fdf")
+	)
+	(wire
+		(pts
+			(xy 185.6 141.22) (xy 185.6 141.24)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "daad61fa-7639-4ab8-ad45-a0c3e52454ef")
+	)
+	(wire
+		(pts
+			(xy 73.66 165.54) (xy 73.66 165.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "dd89080c-e13a-4b9a-be77-bc0904a1b876")
+	)
+	(wire
+		(pts
+			(xy 106.68 135.06) (xy 106.68 135.128)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "debdec60-ef82-48d0-a8cd-c4392b39f11d")
+	)
+	(wire
+		(pts
+			(xy 106.68 142.68) (xy 106.68 142.748)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e31a0f16-da29-4462-b7f6-4fbfe8d4c71c")
+	)
+	(wire
+		(pts
+			(xy 106.68 168.08) (xy 106.68 168.148)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e388757f-2db8-48dc-92f3-4a501b0c2ef2")
+	)
+	(wire
+		(pts
+			(xy 154.94 124.46) (xy 154.94 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e440eae0-4fe1-44c5-afba-45550aadabd6")
+	)
+	(wire
+		(pts
+			(xy 73.66 163) (xy 73.66 165.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ecc6ad22-43ab-458c-85f2-894a2fa09e37")
+	)
+	(wire
+		(pts
+			(xy 183.84 153.92) (xy 185.42 153.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "edf3a42a-a47f-4f46-b623-6a98cd4ab96a")
+	)
+	(wire
+		(pts
+			(xy 223.52 114.3) (xy 226.06 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "eef5021d-5d12-4dd9-aecb-6ec6787849ce")
+	)
+	(wire
+		(pts
+			(xy 106.68 132.52) (xy 106.68 132.588)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f125b0d0-3c85-40b5-a650-d6d889cf96e8")
+	)
+	(wire
+		(pts
+			(xy 154.94 137.16) (xy 154.94 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f20b088d-91af-4b75-b8e3-f23c2acbe863")
+	)
+	(wire
+		(pts
+			(xy 106.68 147.76) (xy 106.68 147.828)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f5ac09d0-767f-4c4d-9188-17367d3d1623")
+	)
+	(wire
+		(pts
+			(xy 165.1 43.18) (xy 167.64 43.18)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f5e2d245-f2a3-4961-9c87-982617aaa63d")
+	)
+	(wire
+		(pts
+			(xy 152.4 151.38) (xy 152.4 151.384)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fe4de87c-8fb4-4c97-9a8f-74eb671e539a")
+	)
+	(wire
+		(pts
+			(xy 77.38 155.38) (xy 73.66 155.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ff7be853-68ff-4c0d-9de3-05d905f8ade9")
+	)
+	(label "MCP23017_GPB0"
+		(at 106.68 50.8 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "02ea7e15-aad1-4068-873a-e198e8be1f12")
+	)
+	(label "MCP23017_GPA3"
+		(at 106.68 137.668 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "0518d985-8493-4a7d-b438-10ca2ef56a26")
+	)
+	(label "PI_CE0"
+		(at 185.42 156.464 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f9b3f57-a434-4c34-82af-00661788094c")
+	)
+	(label "MCP3008_CH0"
+		(at 99.6 86.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "1036369c-f297-4625-a28c-016a9543d39b")
+	)
+	(label "MCP23017_GPA2"
+		(at 106.68 135.128 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "11e80768-475a-4b48-98c7-48dc4096a8a9")
+	)
+	(label "MCP23017_GPA4"
+		(at 167.64 71.12 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f7ae2eb-1732-43a1-8857-5f7096efec6a")
+	)
+	(label "MCP23017_GPA1"
+		(at 106.68 132.588 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "22f87b3e-04ee-4b5c-8860-5ca55631e5de")
+	)
+	(label "MCP3008_CH4"
+		(at 152.4 151.384 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "251816d2-56f0-4c6b-bb4a-b5557fb7831c")
+	)
+	(label "PI_MISO"
+		(at 226.06 111.76 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "254b9199-1ba3-48c5-b708-71cd0d24364b")
+	)
+	(label "PI_INTB"
+		(at 226.06 116.84 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "2969343a-c261-4d54-9eb0-fc5634711992")
+	)
+	(label "MCP3008_CH2"
+		(at 142.24 146.3 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "2cd06645-5661-49b4-8421-da6d170f4822")
+	)
+	(label "MCP3008_CH7"
+		(at 152.4 159.004 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "30185a66-4779-489d-852c-387531389d91")
+	)
+	(label "MCP23017_GPB5"
+		(at 106.68 165.608 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "31fe62ea-985a-4062-9501-70f43f63b090")
+	)
+	(label "MCP23017_GPA7"
+		(at 106.68 147.828 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "3685dc21-872e-400f-b0e4-685031b06aa1")
+	)
+	(label "PI_MISO"
+		(at 185.42 151.384 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "38eb96dd-0ab7-4897-bca5-e6027148c699")
+	)
+	(label "PI_MOSI"
+		(at 226.06 114.3 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b8115f4-eec7-4993-a303-7142fa9dfe85")
+	)
+	(label "MCP3008_CH3"
+		(at 152.4 148.844 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "3f9b823e-2757-48a0-9a60-8259e6a6401e")
+	)
+	(label "PI_SCL"
+		(at 205.74 114.3 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "41757223-d680-44a9-9378-77807472874f")
+	)
+	(label "MCP23017_GPB7"
+		(at 167.64 35.56 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f5ac77b-37e0-4d8f-ac5e-2e669d05ac2d")
+	)
+	(label "PI_INTA"
+		(at 205.74 116.84 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "5054f0fd-0433-4c74-8a04-48876ad6f01a")
+	)
+	(label "PI_SLK"
+		(at 226.06 109.22 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "50c7400e-d173-4a25-bd50-a87c0ea8f8d5")
+	)
+	(label "GND"
+		(at 205.74 109.22 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "57622f75-de83-4ad8-9237-a8bb82b53357")
+	)
+	(label "PI_SLK"
+		(at 185.42 148.844 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "57740545-ea05-4963-a2e3-75afe1722b26")
+	)
+	(label "MCP3008_CH6"
+		(at 152.4 156.464 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "5dbc2c6a-6afb-4bac-9fe9-36e448df7909")
+	)
+	(label "MCP23017_GPA1"
+		(at 103.6 76.84 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fcb0326-89ef-4c92-bb06-c4f68bfd9631")
+	)
+	(label "MCP23017_GPA6"
+		(at 103.6 64.84 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "61263515-c3a6-45d3-96e1-656f5ef542b6")
+	)
+	(label "PI_SDA"
+		(at 73.66 155.448 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "615216e7-1cf5-4c2e-a812-b4ce2a05ef51")
+	)
+	(label "MCP23017_GPA5"
+		(at 106.68 142.748 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "61a4ff57-d7be-4e3a-acb0-e87822b4ddb8")
+	)
+	(label "MCP23017_GPA2"
+		(at 103.6 73.84 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6369ec20-1d70-4289-8db1-0fdd1bc55448")
+	)
+	(label "MCP23017_GPB0"
+		(at 106.68 152.908 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "69ab3dc7-4e4b-49ad-b403-c1eaf7b25466")
+	)
+	(label "MCP23017_GPB3"
+		(at 106.68 43.18 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c5e04f2-b3e8-4dd0-9c33-002b928475a3")
+	)
+	(label "MCP23017_GPA3"
+		(at 167.64 86.36 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6de547bc-beab-4460-857c-1a9aaf24e635")
+	)
+	(label "MCP3008_CH0"
+		(at 152.4 141.224 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "7643d1ff-894a-4c2f-9cc0-9f0fbefef3f0")
+	)
+	(label "MCP23017_GPB7"
+		(at 106.68 170.688 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "769d9f8f-c885-4f56-b32c-d93671a52173")
+	)
+	(label "MCP23017_GPB6"
+		(at 167.64 50.8 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "78d02cff-1e8d-4826-98ea-2a8fe42cf26c")
+	)
+	(label "MCP23017_GPB1"
+		(at 106.68 155.448 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b07ffc0-7369-4c65-8ca9-053ce4d47c5f")
+	)
+	(label "MCP3008_CH5"
+		(at 106.6 100.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e9fb6b4-19de-43f2-bf1a-50f1ca9668a7")
+	)
+	(label "MCP23017_GPA0"
+		(at 106.68 130.048 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "8210879b-f62b-4052-a621-b9145183c338")
+	)
+	(label "MCP23017_GPB6"
+		(at 106.68 168.148 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "835eeedf-2259-46a7-933f-089ac7e87ebd")
+	)
+	(label "MCP23017_GPA7"
+		(at 103.6 67.84 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "90ed18bf-2d80-4d1a-8826-49fe29b01a14")
+	)
+	(label "MCP3008_CH1"
+		(at 152.4 143.764 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "ac79f7e6-3b9d-4605-bc35-63f42e485d11")
+	)
+	(label "MCP23017_GPB2"
+		(at 106.68 157.988 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0156e42-1714-4861-a4bb-06b283f1d832")
+	)
+	(label "MCP23017_GPB3"
+		(at 106.68 160.528 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4275330-036e-44b4-ba97-c1eb45bd23dd")
+	)
+	(label "MCP23017_GPB2"
+		(at 106.68 58.42 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5319b8d-00bb-43cf-98ff-2bb1728747df")
+	)
+	(label "MCP23017_GPB4"
+		(at 167.64 43.18 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "bb623a71-18fe-4b82-8ecf-2ae90d231387")
+	)
+	(label "MCP3008_CH4"
+		(at 99.6 101.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf23feab-96bb-467b-89b4-ae7a3236dd08")
+	)
+	(label "MCP23017_GPB1"
+		(at 106.68 35.56 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0ef942e-36b0-4ba6-9056-3b7f36cf7ed3")
+	)
+	(label "MCP23017_GPB4"
+		(at 106.68 163.068 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce279d59-6fb5-4a94-b4ac-0f3293fdaaa5")
+	)
+	(label "PI_SCL"
+		(at 73.66 152.908 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "d66595fd-6289-4a8b-afcd-609c90e29605")
+	)
+	(label "PI_CE0"
+		(at 226.06 106.68 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6f44cb8-7bcb-4162-a0bd-d49098e53255")
+	)
+	(label "MCP3008_CH1"
+		(at 99.6 89.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "da0f5ede-3512-4405-87d2-930dfe833283")
+	)
+	(label "VCC"
+		(at 205.74 106.68 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "db538b78-c990-4e99-8465-f360a0d44844")
+	)
+	(label "MCP23017_GPA5"
+		(at 167.64 78.74 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "dca3b151-5764-4c47-ba13-63014f3be607")
+	)
+	(label "PI_INTB"
+		(at 73.66 142.748 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "e2cb0537-06a0-4878-a8fc-8a25c5feaa4f")
+	)
+	(label "MCP3008_CH5"
+		(at 142.24 153.924 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "e4b91269-246e-4cc1-b25e-a436f8ad500c")
+	)
+	(label "MCP3008_CH2"
+		(at 106.6 88.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "e87b8a5d-ff0c-4325-828e-73b665d0f907")
+	)
+	(label "PI_INTA"
+		(at 73.66 140.208 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb7273da-e869-4075-8273-9c508f0d83a9")
+	)
+	(label "MCP23017_GPA4"
+		(at 106.68 140.208 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee3d5491-d292-438d-8ca4-9cfb5573b07a")
+	)
+	(label "PI_MOSI"
+		(at 185.42 153.924 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "f38f820f-fde7-4641-a055-9e99fb02bb56")
+	)
+	(label "PI_SDA"
+		(at 205.74 111.76 180)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify right bottom)
+		)
+		(uuid "f5bb9162-9dfd-4d11-b016-898244a927d5")
+	)
+	(label "MCP23017_GPA6"
+		(at 106.68 145.288 0)
+		(effects
+			(font
+				(size 0.1778 0.1778)
+			)
+			(justify left bottom)
+		)
+		(uuid "faa8bb78-75ca-49ec-8a61-b125b59ac155")
+	)
+	(label "MCP3008_CH3"
+		(at 99.6 98.84 0)
+		(effects
+			(font
+				(size 0.35 0.35)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbe17d32-4bf3-4e06-8c4f-d26e992ce9cf")
+	)
+	(label "MCP23017_GPB5"
+		(at 167.64 58.42 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "fcade9a5-1354-4a1c-8b44-188e2ef30206")
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "016a039e-a508-4f79-8217-52e2bba213c4")
+		(property "Reference" "HOME0"
+			(at 160.02 84.836 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 86.868 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "8925feaf-9a18-48bd-ba4a-1d0b6b27c0f4")
+		)
+		(pin "1"
+			(uuid "a4bf2594-6cea-41bf-8078-187f6c6e70c6")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "HOME0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:VCC")
+		(at 190.2 141.24 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03083281-a46f-4ca8-bb8a-f2a5b951eb13")
+		(property "Reference" "#P+1"
+			(at 190.2 141.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 187.66 138.7 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.2 141.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.2 141.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 190.2 141.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "477d710a-27b5-4d67-8405-f1c8e7d5c2d9")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#P+1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 93.6 64.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0732041c-db55-4407-a83d-6f5be05578db")
+		(property "Reference" "#GND9"
+			(at 93.6 64.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.06 65.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.6 64.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.6 64.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.6 64.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "40e7de62-915a-40e5-8173-00b60cb3a880")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:R-US_0207/7")
+		(at 144.78 129.54 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b43de4d-1081-498b-af43-99a0edc6cd90")
+		(property "Reference" "R1"
+			(at 143.2814 133.35 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "R-US_0207/7"
+			(at 148.082 133.35 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "gamepad:0207_7"
+			(at 144.78 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "602e0c75-fedb-49b4-a328-14ddf862065b")
+		)
+		(pin "2"
+			(uuid "50588c3d-19d5-4cda-ab5c-83ce2eed7095")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:VCC")
+		(at 149.86 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c20a997-0954-4f0e-ae7e-32cecc51c2f0")
+		(property "Reference" "#P+5"
+			(at 149.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 147.32 121.92 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fdd5574d-d72a-425e-b71f-7e637991ed04")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#P+5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 93.6 73.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0de43516-c73b-42ac-814c-269d29c596fb")
+		(property "Reference" "#GND10"
+			(at 93.6 73.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.06 74.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.6 73.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.6 73.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.6 73.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dedf02ac-c1d4-46ae-9f4b-424ff23978a8")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "11710a01-776a-4b70-bdac-53867b729a63")
+		(property "Reference" "START0"
+			(at 160.02 69.596 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 71.628 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38e7287f-694c-4f30-90de-0ed256912370")
+		)
+		(pin "3"
+			(uuid "bafe3d9d-ba12-4d98-801d-52e17b4b2077")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "START0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:VCC")
+		(at 108.6 103.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1360f5e8-bd78-4572-a75a-e6bd1d21c483")
+		(property "Reference" "#P+2"
+			(at 108.6 103.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 109.06 104.3 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 108.6 103.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 108.6 103.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 108.6 103.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb684f73-033b-4229-929e-a1d0d027cf5a")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#P+2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 99.06 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26aa687e-9ac3-4f6f-bf83-a0caa0513602")
+		(property "Reference" "UP0"
+			(at 99.06 34.036 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 99.06 36.068 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 99.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1edd49e1-be7a-474e-b567-85e7b93a1f59")
+		)
+		(pin "3"
+			(uuid "0edfd98d-25f8-44e3-aac2-c6c0aa7d9edc")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "UP0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 99.06 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "277b74a4-9320-4398-b912-13f18832afb9")
+		(property "Reference" "LEFT0"
+			(at 99.06 49.276 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 99.06 51.308 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ca8d978-56b7-450e-90b2-e4ad436b3700")
+		)
+		(pin "3"
+			(uuid "6bbf20b5-68d3-4172-8912-d5681a206476")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "LEFT0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 116.6 102.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29d476d9-35b7-41f2-9916-9b6b73150016")
+		(property "Reference" "#GND19"
+			(at 116.6 102.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.14 105.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.6 102.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.6 102.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.6 102.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a4220ba-9b61-41a1-9137-08f1f1fc7b0e")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:VCC")
+		(at 108.6 91.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36d719ea-ef22-4160-9018-97440888ccab")
+		(property "Reference" "#P+3"
+			(at 108.6 91.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 109.06 92.3 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 108.6 91.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 108.6 91.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 108.6 91.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37156e53-2b7d-4d9c-9c98-f19809d7bdf8")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#P+3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37cad272-6652-4f87-b08c-ed49e3834ecf")
+		(property "Reference" "#GND7"
+			(at 152.4 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 48.26 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dae61f86-1081-4949-abfb-8a0f58c5fad2")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MJTP2205")
+		(at 99.6 74.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3936f3a2-a1db-49e2-873f-f5bba4ec82c3")
+		(property "Reference" "RIGHT_TRIGGERS0"
+			(at 96.6 72.84 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "MJTP2205"
+			(at 99.6 74.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "gamepad:MJTP2205"
+			(at 99.6 74.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.6 74.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.6 74.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND$2"
+			(uuid "898f0f17-1066-4fb3-8ca9-f2c1ad4347c3")
+		)
+		(pin "IN$1"
+			(uuid "9773e973-dca0-4fb6-b07d-393c1bdd585a")
+		)
+		(pin "GND$1"
+			(uuid "8afe46e5-dfd7-4642-b31a-a9a1c64dd0f7")
+		)
+		(pin "IN$2"
+			(uuid "0414375e-15bf-49f3-b292-5bcc75a8b26a")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "RIGHT_TRIGGERS0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 71.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39877b16-ba14-4eed-98d8-bb6f9bb2a01c")
+		(property "Reference" "#GND13"
+			(at 152.4 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 68.58 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff364bb4-1b51-4646-9d9f-446370563815")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 78.74 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "40c603d8-c3a1-4f21-86ba-a8511aea6dd6")
+		(property "Reference" "#GND14"
+			(at 152.4 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 76.2 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "161797c2-ea94-4d71-9729-9b986dda1dca")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 68.58 165.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44772f33-a401-4e2f-ad67-dc349f5aaf92")
+		(property "Reference" "#GND22"
+			(at 68.58 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 162.56 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b555e91-1d18-4867-a1dd-558e20784cf1")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 112.6 87.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "46487cc6-ddc3-460f-b010-b9d2d011d58a")
+		(property "Reference" "#GND16"
+			(at 112.6 87.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.14 90.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.6 87.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.6 87.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.6 87.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d379dc4b-5511-4733-a8a3-9f95f467d99c")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 86.36 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "50e1de86-3318-4ae4-a341-e27e1cd31588")
+		(property "Reference" "#GND15"
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 83.82 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c1109b9-a82a-4df9-a3ef-d0112717a59c")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 91.44 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53f8eb27-e613-4b5e-b106-77869749a233")
+		(property "Reference" "#GND4"
+			(at 91.44 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 55.88 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47ddc95b-db0b-4f6b-b9f6-668bcecb1393")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 43.18 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "68eb49db-b63c-47be-b129-d3265978694c")
+		(property "Reference" "#GND6"
+			(at 152.4 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 40.64 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53cc2a6b-01d9-4a8b-817c-cbdaddcad5e2")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 91.44 43.18 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7100135b-2b01-4ba7-8920-e08ec344798e")
+		(property "Reference" "#GND2"
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 40.64 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54708711-9c95-4ade-b2d3-3449b76136b9")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 198.02 159.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72bb3d4c-1631-4dfe-9f0d-bd2652eb47f3")
+		(property "Reference" "#GND21"
+			(at 198.02 159.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.56 161.58 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.02 159.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.02 159.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 198.02 159.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "469b642d-d0b0-4585-b2be-e1bb28a19e74")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72c78977-4e48-4880-bf05-2d9794bb7de3")
+		(property "Reference" "B0"
+			(at 160.02 41.656 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 43.688 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9765cc3e-1699-419a-a974-f67d2569537e")
+		)
+		(pin "1"
+			(uuid "3237f8fe-18b2-4921-a964-2caff0fac5e8")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "B0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 91.44 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "75d64c7f-cdd9-4b5e-b24a-8fbd46eacda8")
+		(property "Reference" "#GND1"
+			(at 91.44 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 33.02 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5580d152-358a-45fe-9817-bb7e47ab9bd1")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87b139fe-fea8-4c53-9094-c74dc6f66561")
+		(property "Reference" "X0"
+			(at 160.02 49.276 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 51.308 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "f13fe3fd-40d4-4920-b47f-18c259b4487d")
+		)
+		(pin "1"
+			(uuid "fcc7bf20-fa7f-4e2d-a7c6-3b7c6dde4bf2")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "X0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8ff0f77a-69d8-46eb-b216-b88389db2cfb")
+		(property "Reference" "#GND8"
+			(at 152.4 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 55.88 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "32222824-57e1-46ae-b8eb-b2bfa0f6dc29")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 197.96 146.24 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "953b6a2e-ff84-46eb-95ef-0d7ca4d0fc19")
+		(property "Reference" "#GND20"
+			(at 197.96 146.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.5 148.78 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 197.96 146.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 197.96 146.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 197.96 146.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56704e83-9f4d-4da5-860a-ebd3ff501166")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 99.06 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a4dbbd42-b030-474f-bb96-f00f3ca889b0")
+		(property "Reference" "RIGHT0"
+			(at 99.06 56.896 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 99.06 58.928 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 99.06 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "5dbed051-80e7-482a-8dce-45953c338ba2")
+		)
+		(pin "1"
+			(uuid "9c44e1eb-9e23-4682-b40c-f3e45070239f")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "RIGHT0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:5628")
+		(at 96.6 89.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a4f68d9f-000b-4d80-9540-8c537f70da0b")
+		(property "Reference" "LEFT_STICK0"
+			(at 93.6 85.44 0)
+			(effects
+				(font
+					(size 0.8 0.68)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "5628"
+			(at 96.6 89.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "gamepad:5628"
+			(at 96.6 89.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.6 89.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.6 89.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "VCC"
+			(uuid "39285bf3-0bd8-4210-8eda-62ab5e1b59f3")
+		)
+		(pin "AD1"
+			(uuid "002084d4-22bc-462f-b1b6-9d003b29977c")
+		)
+		(pin "AD2"
+			(uuid "c8a3408f-d73f-4232-b979-758daeb443f6")
+		)
+		(pin "GND1"
+			(uuid "7555f4a4-cf9f-47c4-a9a1-9d30a97f9e10")
+		)
+		(pin "SW"
+			(uuid "33a94434-2eb3-44e4-86e0-c186f04fc004")
+		)
+		(pin "GND2"
+			(uuid "67dc05a4-ba90-49b4-8ed0-cca79f59c630")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "LEFT_STICK0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MCP23017SP")
+		(at 90.08 150.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a5989909-d7e0-4d65-aa5f-b6dfd4756b10")
+		(property "Reference" "IC1"
+			(at 79.92 126.17 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "MCP23017SP"
+			(at 79.92 175.7 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "gamepad:DIL28-3"
+			(at 90.08 150.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.08 150.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.08 150.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "21"
+			(uuid "2048dbc7-2ae7-4f94-93d1-ec4720f4c7f7")
+		)
+		(pin "4"
+			(uuid "2bbd5680-6d64-4265-8f01-d361ce265967")
+		)
+		(pin "8"
+			(uuid "4bd4d18e-43aa-42ef-8c52-24de4615cea2")
+		)
+		(pin "9"
+			(uuid "35a19ead-cfc7-42d2-9f31-6bf90687f3f8")
+		)
+		(pin "26"
+			(uuid "c58337e6-34ed-4bf0-8682-6c172ea285bf")
+		)
+		(pin "24"
+			(uuid "3da67c80-707d-490e-a2fe-b4f01db8aa84")
+		)
+		(pin "7"
+			(uuid "85a9ed39-f40c-475f-97f4-4e4ba8cd792d")
+		)
+		(pin "23"
+			(uuid "fc1841b0-fab2-411b-b469-38ffaca425b9")
+		)
+		(pin "28"
+			(uuid "422d0e55-cc5e-48b8-9158-851d13fd5bd7")
+		)
+		(pin "22"
+			(uuid "7760bf04-f836-4478-a8f9-4a8bccfb3f76")
+		)
+		(pin "25"
+			(uuid "d65ba88a-a572-4002-b4b8-ff0b81308dcb")
+		)
+		(pin "19"
+			(uuid "adcd3ed7-faa6-4cf9-b7e5-da865cf6d283")
+		)
+		(pin "6"
+			(uuid "8f027182-e517-4702-801e-7e9a7e1e3399")
+		)
+		(pin "3"
+			(uuid "4e7287a2-f255-4cbe-aff0-611271a39c24")
+		)
+		(pin "20"
+			(uuid "5c592917-b5bd-4601-866a-b06328e4b8ef")
+		)
+		(pin "2"
+			(uuid "b414a463-1c51-4c3b-8b0d-a50213b0b8a7")
+		)
+		(pin "18"
+			(uuid "c15592fe-73f2-48d9-9bf4-652eb96167fe")
+		)
+		(pin "5"
+			(uuid "1f0702d8-fb1b-4d31-8509-a2d9d8cbf550")
+		)
+		(pin "27"
+			(uuid "c47a003c-acea-4578-a82c-b7d2f4dd8325")
+		)
+		(pin "15"
+			(uuid "87147f1f-71af-45bd-8df0-7cc28c30aae6")
+		)
+		(pin "16"
+			(uuid "a0da49f7-32a8-4152-9f65-a664a6737db0")
+		)
+		(pin "17"
+			(uuid "d0183cb7-6015-47a3-89e9-560fa3fb78c1")
+		)
+		(pin "1"
+			(uuid "f571806e-7f1f-49a6-b1a0-90bf1f6b91df")
+		)
+		(pin "10"
+			(uuid "fbb9a3b2-eaaf-4aca-b03d-ad6c0aa4caca")
+		)
+		(pin "12"
+			(uuid "43743e20-c721-48a5-a569-0ce0ead7b77a")
+		)
+		(pin "13"
+			(uuid "400a2b2e-53d4-4380-9654-132f52bced70")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "IC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 91.44 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b3a3a1cc-f9b2-4cfd-b5a4-8af89f8e0bf4")
+		(property "Reference" "#GND3"
+			(at 91.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.9 48.26 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aeb17ad0-673b-4c81-8ec5-f6d0ca06a2af")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bde3aa5d-9abf-4188-a763-fefeaaaf9d83")
+		(property "Reference" "Y0"
+			(at 160.02 56.896 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 58.928 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26b92896-3853-423c-bd49-8eeb267688e1")
+		)
+		(pin "3"
+			(uuid "61756ac4-7902-4a68-ba84-4b7ec5c55d94")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "Y0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MJTP2205")
+		(at 99.6 65.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2f5eec3-5182-4650-bac5-bd986544e35d")
+		(property "Reference" "LEFT_TRIGGERS0"
+			(at 96.6 63.84 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "MJTP2205"
+			(at 99.6 65.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "gamepad:MJTP2205"
+			(at 99.6 65.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.6 65.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.6 65.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "IN$1"
+			(uuid "ac869ad1-2c3f-4c1b-8100-c4443e926d25")
+		)
+		(pin "IN$2"
+			(uuid "4097f605-48a8-47db-b1ee-05db639c70a1")
+		)
+		(pin "GND$1"
+			(uuid "6e5d59d0-b3b5-4a23-9a4e-159f8a83bb82")
+		)
+		(pin "GND$2"
+			(uuid "a1e766b2-bce4-4a36-b256-28208644bced")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "LEFT_TRIGGERS0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c688a32b-1884-40c3-b993-556b56c21482")
+		(property "Reference" "SELECT0"
+			(at 160.02 77.216 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 79.248 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62975723-25e4-422e-8037-0ce1ae2cd6b0")
+		)
+		(pin "3"
+			(uuid "f3affa8c-4145-4dad-b9c8-6de9644fa646")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "SELECT0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:5628")
+		(at 96.6 101.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc5f5f75-ef5c-4150-ab34-7a2209b8bbea")
+		(property "Reference" "RIGHT_STICK0"
+			(at 93.6 97.44 0)
+			(effects
+				(font
+					(size 0.8 0.68)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "5628"
+			(at 96.6 101.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "gamepad:5628"
+			(at 96.6 101.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.6 101.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.6 101.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND1"
+			(uuid "8271a791-f0fb-4e5f-833e-1da893a279d3")
+		)
+		(pin "SW"
+			(uuid "3df08215-0066-4a78-b855-840a5ed8c502")
+		)
+		(pin "AD1"
+			(uuid "3643e756-723d-4172-8520-8689cd296ce2")
+		)
+		(pin "AD2"
+			(uuid "97455c6e-976f-48e9-bebc-40936fbad9b6")
+		)
+		(pin "GND2"
+			(uuid "665459e0-9261-4dec-9088-9e0b2779925e")
+		)
+		(pin "VCC"
+			(uuid "635a2ccf-d789-4568-b654-561ce31bbc38")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "RIGHT_STICK0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 99.06 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d310e51f-4186-4dd5-bc1d-675634121ddd")
+		(property "Reference" "DOWN0"
+			(at 99.06 41.656 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 99.06 43.688 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 99.06 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9b3faa55-be23-4c32-b293-a43d9b9ae861")
+		)
+		(pin "1"
+			(uuid "520dad08-0ce7-4a55-9fc5-c95c7235678d")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "DOWN0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MOMENTARY-SWITCH-SPST-PTH-6.0MM")
+		(at 160.02 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d6eead4d-096a-4ef0-ab52-34984d1a8a3b")
+		(property "Reference" "A0"
+			(at 160.02 34.036 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "MOMENTARY-SWITCH-SPST-PTH-6.0MM"
+			(at 160.02 36.068 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "gamepad:TACTILE_SWITCH_PTH_6.0MM"
+			(at 160.02 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a9193867-4f66-48d4-b61b-b0f3df5c7649")
+		)
+		(pin "1"
+			(uuid "44d40e7e-11fb-43b0-8695-cd28f7b563dc")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "A0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:VCC")
+		(at 68.58 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dcf4a516-a63c-40fd-8663-1864b39789a9")
+		(property "Reference" "#P+4"
+			(at 68.58 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 68.072 131.064 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2bc1b8e-c6a1-4907-a768-ff108361163d")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#P+4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:CONN_05X2PTH")
+		(at 215.9 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dddd7713-6c6f-44b9-937b-ab0627bd0917")
+		(property "Reference" "J1"
+			(at 212.09 103.632 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "CONN_05X2PTH"
+			(at 212.09 121.666 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "gamepad:2X5"
+			(at 215.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 215.9 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "72e1acb0-2c69-4698-832c-62065992791b")
+		)
+		(pin "9"
+			(uuid "6b018b93-f577-4668-9434-8fd17f91a75b")
+		)
+		(pin "4"
+			(uuid "3375df61-94fe-41d5-8862-72abaa91636a")
+		)
+		(pin "2"
+			(uuid "2b42dfb3-8880-40f3-bed6-bdf626250657")
+		)
+		(pin "7"
+			(uuid "57816045-408e-4a6a-be38-a8bddf1ac430")
+		)
+		(pin "10"
+			(uuid "f7f0ace4-67ee-45c7-9611-cf17d6b088e9")
+		)
+		(pin "3"
+			(uuid "07abe89e-88d3-4dd4-ab6e-96162a344703")
+		)
+		(pin "6"
+			(uuid "433dd91a-b7a2-4c2b-80ab-a35cdc22d07e")
+		)
+		(pin "1"
+			(uuid "fd46bf67-7df1-4653-b1eb-80a6256129e1")
+		)
+		(pin "8"
+			(uuid "9dd63034-addb-47cf-83ba-1a555b594740")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 93.6 76.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "df739e76-4af7-4460-b19d-2d7c283b31f1")
+		(property "Reference" "#GND12"
+			(at 93.6 76.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.06 77.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.6 76.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.6 76.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.6 76.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7a9a840-fa2e-47b9-963c-27abe606b99d")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 93.6 67.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e642b8e6-209d-4f1e-b061-ae9a807c1eb8")
+		(property "Reference" "#GND11"
+			(at 93.6 67.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 88.06 68.38 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.6 67.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.6 67.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.6 67.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2579f215-15b8-4682-a008-01498c367607")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 116.6 90.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5b67fa9-623a-4406-8adf-5b9bb56d9281")
+		(property "Reference" "#GND17"
+			(at 116.6 90.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.14 93.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.6 90.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.6 90.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.6 90.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f315f105-0b5d-4c09-987b-5f3b76ddd96f")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:R-US_0207/7")
+		(at 154.94 129.54 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb06aaf3-79c4-4f3f-8020-2d91501f0ffd")
+		(property "Reference" "R2"
+			(at 153.4414 133.35 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "R-US_0207/7"
+			(at 158.242 133.35 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "gamepad:0207_7"
+			(at 154.94 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "495ec683-428d-46c0-aec9-6c17b838f979")
+		)
+		(pin "1"
+			(uuid "6f41417c-f22b-46b3-8415-4e4565becf1b")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:MCP3008")
+		(at 168.6 148.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb56ee95-be08-4b0c-953e-1200b32d159f")
+		(property "Reference" "IC2"
+			(at 178.76 136.14 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right top)
+			)
+		)
+		(property "Value" "MCP3008"
+			(at 168.6 148.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "gamepad:DIL16"
+			(at 168.6 148.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.6 148.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 168.6 148.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "11"
+			(uuid "d160e148-0afa-413c-a165-c11271446cc4")
+		)
+		(pin "13"
+			(uuid "9e83f6c9-c4d8-404d-b8ba-3c16cc34fbc6")
+		)
+		(pin "2"
+			(uuid "79a1e184-32bb-4092-8a1b-8d711d920ee9")
+		)
+		(pin "6"
+			(uuid "9cc79ecd-025a-4e82-ac35-40bd7dd248bb")
+		)
+		(pin "10"
+			(uuid "a1200249-9d0a-4047-bf74-fd7470a4f0f6")
+		)
+		(pin "1"
+			(uuid "c9172eca-4b05-4852-af06-6067df7b6739")
+		)
+		(pin "12"
+			(uuid "2aa5dc2d-d2a2-41d5-bbec-bfe1fdace930")
+		)
+		(pin "14"
+			(uuid "4227f8e5-c9cb-4173-8012-8745a10966c6")
+		)
+		(pin "15"
+			(uuid "7fba8c9b-995b-491c-bce1-2ab8007dd089")
+		)
+		(pin "16"
+			(uuid "03c231db-8f45-4572-863f-51e18bde711f")
+		)
+		(pin "4"
+			(uuid "e30eff8c-591b-4fde-b3c7-c19c9ede5667")
+		)
+		(pin "3"
+			(uuid "4fcf2944-a726-48cf-b0b9-0a1cac156e17")
+		)
+		(pin "5"
+			(uuid "8a5a6a52-4880-4d50-870d-c66fe7429bea")
+		)
+		(pin "7"
+			(uuid "b7453fee-87d4-44bb-908c-2481a5af32be")
+		)
+		(pin "8"
+			(uuid "027e8f86-4a2d-4272-8d26-1bb63cd6f300")
+		)
+		(pin "9"
+			(uuid "91e6a2d3-5659-48c8-a3c4-b547b5d31b83")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "IC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 112.6 99.84 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fefc2b28-8f5b-4e60-818b-cde6184a1b0b")
+		(property "Reference" "#GND18"
+			(at 112.6 99.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.14 102.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.6 99.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.6 99.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 112.6 99.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c6b7703-9f66-4f65-ab34-9f6819d0bb9e")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "gamepad-eagle-import:GND")
+		(at 152.4 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff65557f-4e98-4171-92ba-42f2baf24ae4")
+		(property "Reference" "#GND5"
+			(at 152.4 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 33.02 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75579296-034b-4abc-a072-4d0e724f00ed")
+		)
+		(instances
+			(project ""
+				(path "/0de7c742-ee57-4fe4-883c-2f3e07f18363"
+					(reference "#GND5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
