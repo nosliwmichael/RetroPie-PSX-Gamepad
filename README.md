@@ -135,3 +135,8 @@ The small raspberry icons are there to tell you how each pin of the MCP3008/MCP2
 
 Finally, this is an example of the entire thing connected with a combination of wire and jumper cables. My Raspberry Pi is attached to a [CanaKit Raspberry Pi GPIO Breakout Board](https://www.canakit.com/raspberry-pi-gpio-breakout.html) to make it easier to wire the ICs to the correct GPIO pin. If you boot up RetroPie with the script and this controller configuration, it should detect your gamepad and allow you to configure your inputs. Once you've confirmed it works, the final step would be to move this setup to something more official, like a perfboard or a custom PCB.
 ![Breadboard wiring example.](./docs/breadboard-wiring-example.png)
+
+# Custom PCB
+Using software like KiCAD, we can draw up a schematic with what we've learned on our breadboard. We can use the built in library to select the components we want or design our own symbols/footprints for those that don't have them. With that out of the way, we can make a board file out of the schematic and lay things out the way we want them. The final step is to generate the files the manufacturer will need to create the board for us.
+![Custom PCB for game controls](./docs/gamepad-pcb.jpg)
+![Manufactured PCB](./docs/manufactured-gamepad-pcb.png)
