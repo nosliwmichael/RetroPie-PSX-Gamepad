@@ -138,5 +138,11 @@ Finally, this is an example of the entire thing connected with a combination of 
 
 # Custom PCB
 Using software like KiCAD, we can draw up a schematic with what we've learned on our breadboard. We can use the built in library to select the components we want or design our own symbols/footprints for those that don't have them. With that out of the way, we can make a board file out of the schematic and lay things out the way we want them. The final step is to generate the files the manufacturer will need to create the board for us.
+
+Check out the [PCB-Files](https://github.com/nosliwmichael/RetroPie-PSX-Gamepad/tree/PCB-Files) branch if you want to make your own.
 ![Custom PCB for game controls](./docs/gamepad-pcb.jpg)
-![Manufactured PCB](./docs/manufactured-gamepad-pcb.png)
+![Manufactured PCB](./docs/manufactured-gamepad-pcb.jpeg)
+
+# Prototype
+Checkout the [Case-3D-Model](https://github.com/nosliwmichael/RetroPie-PSX-Gamepad/tree/Case-3D-Model) branch if you want to make your own.
+![Completed Prototype](./docs/completed-prototype.jpeg)
